@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "nilor-black":"#000000",
+        "nilor-offwhite":"#f2f2f2",
+        "nilor-white":"#ffffff"
+      },
+      boxShadow: {
+        'soft-glow': '0 4px 20px rgba(255, 255, 255, 0.5)', // Custom white glow shadow
       },
     },
   },

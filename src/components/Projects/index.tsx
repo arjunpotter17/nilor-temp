@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import Card from "./components/ProjectCard";
 import { projects } from "./constants";
-import EmblaCarousel from "embla-carousel";
 import Carousel from "./components/Carousel";
 import './styles/carousel.css'
 
@@ -10,7 +8,7 @@ const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 function Projects() {
-    const [selected, setSelected] = useState(projects[0])
+    const [selected, ] = useState(projects[0])
   return (
     <div className="flex flex-col w-full items-center gap-y-24">
       <p className="w-full text-center text-nilor-white text-landing-section-pre">Our Work</p>

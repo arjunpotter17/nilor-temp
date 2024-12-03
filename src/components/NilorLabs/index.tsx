@@ -6,11 +6,12 @@ function NilorLabs() {
           </p>
           <p className="text-landing-section-title text-nilor-white mb-2">Always State-of-the Art</p>
         <video
-          src={`${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}labs.mp4`}
-          autoPlay
+          src={`https://pub-05f59bf6323d4ee3a29185a0d7e91752.r2.dev/labs.mp4`}
+          autoPlay={true}
           loop
           controls={false}
           muted
+          preload="auto"
           className="h-full w-full"
           disablePictureInPicture
         ></video>

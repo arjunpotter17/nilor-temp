@@ -7,7 +7,7 @@ export const blogs = [
     {
         title:'How to view a video',
         type:"Video",
-        time:"2 min read"
+        time:"2 min watch"
     },
     {
         title:'How to read a news article',

@@ -25,17 +25,26 @@ const Navbar = () => {
         </Link>
         {/* Desktop Navbar Items */}
         <div className="hidden md:flex items-center justify-between gap-x-32">
-          <div className="flex gap-x-5">
-          {navbarItems.map((item) => (
-            <a key={item.name} className="text-nilor-offwhite text-xs hover:font-bold min-w-[50px]" href={item.link}>{item.name.toLocaleUpperCase()}</a>
-          ))}
-          </div>
-          <div className="flex gap-x-4">
-            <button className="font-bold text-nilor-white">Login</button>
-            <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold">Contact Us</button>
-            <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold">Book a Demo</button>
-          </div>
-        </div>
+  <div className="flex gap-x-5">
+    {navbarItems.map((item) => (
+      <a key={item.name} className="text-nilor-offwhite font-semibold text-xs hover:text-nilor-accent hover:font-bold min-w-[50px]" href={item.link}>
+        {item.name.toLocaleUpperCase()}
+      </a>
+    ))}
+  </div>
+  <div className="flex gap-x-4">
+    <button className="font-bold text-nilor-white transform hover:scale-95 transition-all duration-200 bg-transparent hover:bg-nilor-accent rounded-full px-7 py-3">
+      LOGIN
+    </button>
+    <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
+      Contact Us
+    </button>
+    <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
+      Book a Demo
+    </button>
+  </div>
+</div>
+
 
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden flex items-center">

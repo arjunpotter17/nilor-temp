@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -61,6 +62,10 @@ const Carousel: React.FC<PropType> = (props) => {
             />
           ))}
         </div>
+      </div>
+      <div className='flex flex-col text-nilor-white gap-y-10'>
+          <h1 className='text-landing-section-title'>Solution types</h1>
+          <p className='text-landing-section-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptatum possimus repellendus saepe sapiente, ab molestias aliquid rem nisi esse ratione itaque ut assumenda. Tempora ipsa doloribus, sapiente adipisci deserunt vel aliquam quas sint recusandae cum nulla aliquid pariatur magni architecto veritatis vero dolorum maxime corporis perferendis? Ratione commodi.</p>
       </div>
     </div>
   )

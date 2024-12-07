@@ -22,6 +22,13 @@ export default {
       fontFamily: {
         sans: ["var(--font-nilor)", "sans-serif"], //overrides everywhere 
       },
+      fontWeight: {
+        "nilor-light": '200',
+        "nilor-regular": '400',
+        "nilor-medium": '500',
+        "nilor-semibold": '600',
+        "nilor-bold": '700',
+      },
       fontSize:{
         "landing-section-pre":['1.875rem', { lineHeight: '2.25rem' }],
         "landing-section-title":['4.5rem', { lineHeight: '1' }],
@@ -30,5 +37,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("@xpd/tailwind-3dtransforms")
+  ],
 } satisfies Config;

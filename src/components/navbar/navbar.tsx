@@ -27,9 +27,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-between gap-x-32">
   <div className="flex gap-x-5">
     {navbarItems.map((item) => (
-      <a key={item.name} className="text-nilor-offwhite font-nilor-semibold text-xs hover:text-nilor-accent hover:font-bold min-w-[50px]" href={item.link}>
+      <Link key={item.name} className="text-nilor-offwhite font-nilor-semibold text-xs hover:text-nilor-accent hover:font-bold min-w-[50px]" href={item.link}>
         {item.name.toLocaleUpperCase()}
-      </a>
+      </Link>
     ))}
   </div>
   <div className="flex gap-x-4">

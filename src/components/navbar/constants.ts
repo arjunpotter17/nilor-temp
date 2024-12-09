@@ -8,23 +8,23 @@ export const navbarItems = [
   },
   {
     name: 'Products',
-    link: '/Products',
+    link: '/products',
   },
   {
     name: 'Services',
-    link: '/Services',
+    link: '/services',
   },
   {
     name: 'Learn',
-    link: '/Learn',
+    link: '/learn',
   },
   {
     name: 'Insights',
-    link: '/Insights',
+    link: '/insights',
   },
   {
     name: 'About',
-    link: '/About',
+    link: '/about',
   },
 
 ]

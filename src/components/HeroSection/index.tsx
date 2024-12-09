@@ -1,10 +1,24 @@
-interface HeroProps {
-  type: "video" | "image";
+interface HeroPropsBase {
   text: string;
   src: string;
 }
 
-function HeroBanner({ type, text, src }: HeroProps) {
+interface HeroPropsVideo extends HeroPropsBase {
+  type: "video";
+  pre?: never;
+  title?: never;
+}
+
+interface HeroPropsImage extends HeroPropsBase {
+  type: "image";
+  pre: string;
+  title: string; 
+}
+
+type HeroProps = HeroPropsVideo | HeroPropsImage;
+
+
+function HeroBanner({ type, text, src, pre,title }: HeroProps) {
   return (
     <div className="w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center">
       {type == "video" ? (
@@ -23,8 +37,8 @@ function HeroBanner({ type, text, src }: HeroProps) {
       style={{ backgroundImage: `url(${src})` }}
     >
           <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10">
-          <p className="text-landing-section-pre">SOLUTIONS</p>
-          <p className="text-landing-section-title max-w-[60%] font-nilor-semibold">A Complete Visual Experience Ecosystem</p>
+          <p className="text-landing-section-pre">{pre}</p>
+          <p className="text-landing-section-title max-w-[60%] font-nilor-semibold">{title}</p>
           </div>
         </div>
       ) : null}

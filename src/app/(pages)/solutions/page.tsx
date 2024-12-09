@@ -27,6 +27,8 @@ export default function Solutions() {
     <HeroBanner
       type="image"
       src="/solutions-landing-bg.webp"
+      pre="SOLUTIONS"
+      title="A Complete Visual Experience Ecosystem"
       text={`At every point in the Visual Experience lifecycle, Disguise is here to provide the tools and knowledge you need to realise your vision. Our always-evolving ecosystem combines world-class expertise with the industry’s premium software for a holistic answer to every imaginable problem.`}
     />
     <Platform/>

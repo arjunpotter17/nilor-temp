@@ -33,11 +33,13 @@ export default {
         "landing-section-pre":['1.875rem', { lineHeight: '2.25rem' }],
         "landing-section-title":['4.5rem', { lineHeight: '1' }],
         "landing-section-text":['2.25rem', { lineHeight: '2.5rem' }],
+        "landing-section-text-small":['1.75rem', {lineHeight: '2rem'}]
 
       }
     },
   },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require("@xpd/tailwind-3dtransforms")
   ],
 } satisfies Config;

@@ -4,9 +4,11 @@ import { useState } from "react";
 import { navbarItems } from "./constants";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 // import { XIcon, MenuIcon } from '@heroicons/react/outline'; // Optional: for hamburger icon and close icon
 
 const Navbar = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -39,7 +41,7 @@ const Navbar = () => {
     <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
       Contact Us
     </button>
-    <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
+    <button onClick={() => router.push('/demo')} className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
       Book a Demo
     </button>
   </div>

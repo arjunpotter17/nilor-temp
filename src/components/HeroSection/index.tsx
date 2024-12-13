@@ -45,7 +45,7 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
       ) : type === "bgVideo" ? (
         <>
           <video
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover z-10"
             src={src}
             autoPlay
             loop
@@ -54,7 +54,7 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
             aria-hidden="true"
           />
           <div
-            className="w-full min-h-[calc(100vh-100px)] bg-cover flex items-center justify-center"
+            className="w-full min-h-[calc(100vh-100px)] bg-transparent flex items-center justify-center z-20"
            
           >
             <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10">

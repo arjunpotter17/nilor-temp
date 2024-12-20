@@ -68,7 +68,7 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
       ) : null}
 
       {text && (
-        <p className="text-landing-section-text text-nilor-white max-w-[1152px] w-full text-justify pt-32">
+        <p className="text-nilor-hero-text font-nilor-light text-nilor-white max-w-[1152px] w-full text-justify pt-32">
           {text}
         </p>
       )}

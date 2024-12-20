@@ -2,12 +2,13 @@ function NilorLabs() {
   return (
     <div className="w-full min-h-[800px] flex flex-col justify-center items-center">
       <div className="flex flex-col gap-y-8 w-full items-center">
-        <p className="text-landing-section-pre text-nilor-grey text-justify">
-          NILOR LABS
+        <p className="text-nilor-pre text-nilor-grey text-justify">
+          Nilor Labs
         </p>
-        <p className="text-landing-section-title text-nilor-white mb-2">
+        <h1 className="text-nilor-title text-nilor-white mb-2">
           Always State-of-the Art
-        </p>
+        </h1>
+        <p></p>
       </div>
       <video
         src={`https://pub-05f59bf6323d4ee3a29185a0d7e91752.r2.dev/labs.mp4`}

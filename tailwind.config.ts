@@ -15,7 +15,8 @@ export default {
         "nilor-offwhite":"#f2f2f2",
         "nilor-white":"#ffffff",
         "nilor-grey": "#D3D3D3",
-        "nilor-accent":"#d937d3"
+        "nilor-accent":"#F8607D",
+        "nilor-secondary":"#F8607D"
       },
       boxShadow: {
         'soft-glow': '0 4px 20px rgba(255, 255, 255, 0.5)', // Custom white glow shadow
@@ -31,11 +32,14 @@ export default {
         "nilor-bold": '700',
       },
       fontSize:{
-        "landing-section-pre":['1.875rem', { lineHeight: '2.25rem' }],
-        "landing-section-title":['4.5rem', { lineHeight: '1' }],
-        "landing-section-title-sm":['4rem',{lineHeight:'1'}],
-        "landing-section-text":['2.25rem', { lineHeight: '2.5rem' }],
-        "landing-section-text-small":['1.75rem', {lineHeight: '2rem'}]
+        "nilor-pre":['1.5rem', { lineHeight: '2.25rem' }],
+        "nilor-title":['4.5rem', { lineHeight: '1' }],
+        "nilor-section-title":['3rem', {lineHeight:'1.15rem'}],
+        "nilor-text":['1.875rem', {lineHeight:'2.25rem'}],
+        "nilor-section-text":['1rem', {lineHeight:'1rem'}],
+        "nilor-title-sm":['4rem',{lineHeight:'1'}],
+        "nilor-hero-text":['2.25rem', { lineHeight: '2.5rem' }],
+        "nilor-text-small":['1.75rem', {lineHeight: '2rem'}]
 
       }
     },

@@ -100,7 +100,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   return (
     <div className="embla">
-      <div className="embla__controls">
+      <div className="embla__controls mb-10">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
@@ -125,20 +125,20 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     slide.title &&
                     slide.description &&
                     slide.buttonText && (
-                      <>
-                        <p className="text-landing-section-pre pl-4">
+                      <div className="flex flex-col mt-10 pl-4">
+                        <p className="text-nilor-pre text-nilor-grey">
                           {slide.pre}
                         </p>
-                        <p className="text-landing-section-title-sm pl-4 ">
+                        <p className="text-nilor-section-title mt-5">
                           {slide.title}
                         </p>
-                        <p className="text-landing-section-text-small pl-4 max-w-[50%]">
+                        <p className="text-nilor-section-text max-w-[50%] mt-10">
                           {slide.description}
                         </p>
-                        <button className="text-nilor-white ml-4 bg-transparent border rounded-full px-7 py-3 hover:bg-nilor-accent hover:border-nilor-accent font-bold w-fit">
+                        <button className="text-nilor-white bg-transparent mt-10 border rounded-full px-7 py-3 hover:bg-nilor-accent hover:border-nilor-accent font-bold w-fit">
                           Visit
                         </button>
-                      </>
+                      </div>
                     )}
                 </div>
               </div>

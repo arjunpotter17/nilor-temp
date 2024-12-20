@@ -18,42 +18,43 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-nilor-black sticky top-0 z-50 h-[100px] flex item-center justify-center">
-      <nav className="container mx-auto flex items-center justify-center gap-x-32 w-full">
+    <header className="bg-nilor-black sticky top-0 z-50 h-[72px] flex item-center justify-center">
+      <nav className="container mx-auto flex items-center justify-between w-full max-w-[1152px]">
         {/* Logo */}
-        <Link href="/" className="relative w-[60px] h-[60px]">
-          <Image src={"/Full-White192.png"} alt="nilor logo" fill />
+        <Link href="/" className="relative w-[48px] h-[48px]">
+          <Image src={"/nilor_new_logo.png"} alt="nilor logo" fill />
         </Link>
         {/* Desktop Navbar Items */}
-        <div className="hidden md:flex items-center justify-between gap-x-32">
+        <div className="hidden md:flex items-center justify-between w-fit gap-x-24">
           <div className="flex gap-x-6">
             {navbarItems.map((item) => (
               <Link
                 key={item.name}
-                className={`text-nilor-offwhite font-nilor-semibold text-sm hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 ${
-                  pathname === item.link ? "text-pink-500 font-bold" : ""
+                className={`text-nilor-offwhite text-sm hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 ${
+                  pathname === item.link ? "hover:text-nilor-accent font-bold" : ""
                 }`}
                 href={item.link}
               >
-                {item.name.toLocaleUpperCase()}
+                {item.name}
               </Link>
             ))}
           </div>
-          <div className="flex gap-x-4">
-            <button className="font-bold text-nilor-white transform hover:scale-95 transition-all duration-200 bg-transparent hover:bg-nilor-accent rounded-full px-7 py-3">
-              LOGIN
+          
+        </div>
+        <div className="flex gap-x-4">
+            <button className="font-bold text-nilor-white transform hover:scale-95 transition-all duration-200 bg-transparent hover:bg-nilor-accent rounded-full px-5 py-2">
+              Login
             </button>
-            <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
+            <button className="text-nilor-white text-sm bg-transparent border rounded-full px-5 py-2 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
               Contact Us
             </button>
             <button
               onClick={() => router.push("/demo")}
-              className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200"
+              className="text-nilor-white text-sm bg-transparent border rounded-full px-5 py-2 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200"
             >
               Book a Demo
             </button>
           </div>
-        </div>
 
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden flex items-center">

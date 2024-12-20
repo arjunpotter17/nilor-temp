@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 export function CardDemo({ details }: any) {
   return (
-    <div className="max-w-xs w-full">
+    <div className="w-full">
       <div
         className={cn(
           "group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
@@ -16,7 +16,15 @@ export function CardDemo({ details }: any) {
           "transition-all duration-500"
         )}
       >
-        <div className="text relative z-50">
+        <div 
+          className={cn(
+            "text relative z-50",
+            "absolute bottom-0 left-0 right-0 p-4",
+            "transform translate-y-full transition-transform duration-500 ease-in-out",
+            "group-hover:translate-y-0",
+            "bg-gradient-to-t from-black to-transparent"
+          )}
+        >
           <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
             {details.title}
           </h1>
@@ -28,3 +36,4 @@ export function CardDemo({ details }: any) {
     </div>
   );
 }
+

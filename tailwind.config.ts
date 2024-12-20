@@ -14,6 +14,7 @@ export default {
         "nilor-black":"#000000",
         "nilor-offwhite":"#f2f2f2",
         "nilor-white":"#ffffff",
+        "nilor-grey": "#D3D3D3",
         "nilor-accent":"#d937d3"
       },
       boxShadow: {

@@ -66,8 +66,10 @@ const projects: Project[] = [
 function Projects() {
   return (
     <div className="flex flex-col w-full items-center gap-y-24">
-      <p className="w-full text-center text-nilor-white text-landing-section-pre">Our Work</p>
+      <div className="flex flex-col w-full gap-y-8">
+      <p className="w-full text-center text-landing-section-pre text-nilor-grey">OUR WORK</p>
       <p className="w-full text-center text-nilor-white text-landing-section-title">The Cutting Edge of Visual Experiences</p>
+      </div>
       <Carousel slides={projects} options={{loop:true, dragFree:true}}/>
       
       

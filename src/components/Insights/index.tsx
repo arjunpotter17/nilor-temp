@@ -9,7 +9,7 @@ export default function Insights() {
         <p className="text-landing-section-pre">Get an edge and accelerate your vision.</p>
         <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 font-bold hover:bg-nilor-accent hover:border-nilor-accent">View More</button>
       </div>
-      <div className="flex w-full justify-between">
+      <div className="flex w-full gap-x-8">
         {blogs.map(blog => <CardDemo details={blog} key={blog.type}/>)}
       </div>
     </div>

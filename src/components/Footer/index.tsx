@@ -3,11 +3,11 @@ export default function Footer() {
     <div className="w-full flex items-center justify-center bg-[#011111] py-10">
       <div className="max-w-[1152px] w-full">
         <div className="flex justify-between">
-          <ul className="text-nilor-white">
-            <li>Contact</li>
-            <li>Careers</li>
-            <li>Tutorials</li>
-            <li>About</li>
+          <ul className="text-nilor-white gap-y-2 flex flex-col">
+            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">Contact</li>
+            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">Careers</li>
+            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">Tutorials</li>
+            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">About</li>
           </ul>
           <div className="flex space-x-4 text-nilor-white">
             <a
@@ -61,12 +61,33 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="text-nilor-white mt-5 flex items-center justify-center space-x-4  text-center">
-          <span>• Terms and Conditions</span>
-          <span>• Privacy</span>
-          <span>• License</span>
-          <span>• Support</span>
-        </p>
+        <p className="text-nilor-white mt-5 flex items-center justify-center space-x-4 text-center">
+  <span className="group flex items-center space-x-1">
+    <span className="text-nilor-white">•</span>
+    <span className="hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+      Terms and Conditions
+    </span>
+  </span>
+  <span className="group flex items-center space-x-1">
+    <span className="text-nilor-white">•</span>
+    <span className="hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+      Privacy
+    </span>
+  </span>
+  <span className="group flex items-center space-x-1">
+    <span className="text-nilor-white">•</span>
+    <span className="hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+      License
+    </span>
+  </span>
+  <span className="group flex items-center space-x-1">
+    <span className="text-nilor-white">•</span>
+    <span className="hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+      Support
+    </span>
+  </span>
+</p>
+
       </div>
     </div>
   );

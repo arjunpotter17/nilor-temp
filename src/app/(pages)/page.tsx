@@ -8,30 +8,35 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
     <div className="flex flex-col w-full gap-y-[200px]">
-      <div className="b">
+      <div className="">
         <HeroBanner
-          text={`Nilor creates, renders, and synchronizes cutting edge content for the
-        worlds&apos; largest displays, building immersive and real-time visual
-        experiences. We&apos;re driven to stay on top of the next generation AI
-        stack (WIP closing sentence - key words/synonyms/ideas to convey tho:
-        top of the stack, industry, results, magic) Walk into the magic land.`}
+          text={`Nilor transforms spaces through dynamic canvases, creating immersive visual experiences across the world's most ambitious display installations. Our work lives at the intersection of artistic vision and technological innovation, pushing the boundaries of what's possible in large-scale digital environments. We harness cutting-edge AI and real-time rendering to bring previously impossible creative visions to life
+
+Breathing life into spaces through boundless imagination`}
           type="video"
           src={`${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`}
         />
       </div>
-      <div className="b">
+
+      <div className="">
         <Projects />
       </div>
-      <div className="b">
+
+      <div className="">
         <Clients />
       </div>
-      <div className="b">
+
+      <div className="">
         <NilorLabs />
       </div>
-      <div className="b">
+
+      <div className="">
         <Insights />
       </div>
-      <Footer />
+
+      <div className="">
+        <Footer />
+      </div>
     </div>
   );
 }

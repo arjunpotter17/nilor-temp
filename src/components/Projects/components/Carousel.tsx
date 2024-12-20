@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback, useEffect, useRef } from "react";
 import {
   EmblaCarouselType,
@@ -8,16 +9,18 @@ import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./CarouselButtons";
 import Image from "next/image";
 
-const TWEEN_FACTOR_BASE = 0.2;
+const TWEEN_FACTOR_BASE = 0.84;
+
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max)
 
 interface Project {
   id: number;
-  name: string;
-  title: string;
-  pre: string;
-  description: string;
-  buttonText: string;
-  fullText: string;
+  name?: string;
+  title?: string;
+  pre?: string;
+  description?: string;
+  buttonText?: string;
 }
 
 type PropType = {
@@ -29,7 +32,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
-  const tweenNodes = useRef<HTMLElement[]>([]);
 
   const {
     prevBtnDisabled,
@@ -38,17 +40,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
-    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector(".embla__parallax__layer") as HTMLElement;
-    });
-  }, []);
-
   const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
   }, []);
 
-  const tweenParallax = useCallback(
+  const tweenOpacity = useCallback(
     (emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
       const engine = emblaApi.internalEngine();
       const scrollProgress = emblaApi.scrollProgress();
@@ -79,29 +75,28 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             });
           }
 
-          const translate = diffToTarget * (-1 * tweenFactor.current) * 100;
-          const tweenNode = tweenNodes.current[slideIndex];
-          tweenNode.style.transform = `translateX(${translate}%)`;
+          const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
+          const opacity = numberWithinRange(tweenValue, 0, 1).toString()
+          emblaApi.slideNodes()[slideIndex].style.opacity = opacity
         });
       });
     },
     []
   );
 
+
+
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaApi) return
 
-    setTweenNodes(emblaApi);
-    setTweenFactor(emblaApi);
-    tweenParallax(emblaApi);
-
+    setTweenFactor(emblaApi)
+    tweenOpacity(emblaApi)
     emblaApi
-      .on("reInit", setTweenNodes)
-      .on("reInit", setTweenFactor)
-      .on("reInit", tweenParallax)
-      .on("scroll", tweenParallax)
-      .on("slideFocus", tweenParallax);
-  }, [emblaApi, tweenParallax]);
+      .on('reInit', setTweenFactor)
+      .on('reInit', tweenOpacity)
+      .on('scroll', tweenOpacity)
+      .on('slideFocus', tweenOpacity)
+  }, [emblaApi, tweenOpacity])
 
   return (
     <div className="embla">
@@ -113,32 +108,38 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       </div>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide " key={index.id}>
+          {slides.map((slide) => (
+            <div className="embla__slide" key={slide.id}>
               <div className="embla__parallax">
-                {/* <div className="embla__parallax__layer">
-                  <img
-                    className="embla__slide__img embla__parallax__img"
-                    src={`https://picsum.photos/600/350?v=${index.id}`}
-                    alt={index.title}
-                  />
-                </div> */}
                 <div className="embla__parallax__layer flex flex-col gap-y-5 text-nilor-white ">
                   <div className="relative embla__slide__img ">
                     <Image
                       fill
-                    
-                      src={`https://picsum.photos/600/350?v=${index.id}`}
-                      alt={index.title}
+                      src={`https://picsum.photos/600/350?v=${slide.id}`}
+                      alt={slide.title || (slide.id as unknown as string)}
                     />
+                     
                   </div>
-                  <p className="text-landing-section-pre">{index.title}</p>
-                  <p className="text-landing-section-text">
-                    {index.description}
-                  </p>
-                  <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 hover:bg-nilor-accent hover:border-nilor-accent font-bold w-fit">
-                    Visit
-                  </button>
+
+                  {slide.pre &&
+                    slide.title &&
+                    slide.description &&
+                    slide.buttonText && (
+                      <>
+                        <p className="text-landing-section-pre pl-4">
+                          {slide.pre}
+                        </p>
+                        <p className="text-landing-section-title-sm pl-4 ">
+                          {slide.title}
+                        </p>
+                        <p className="text-landing-section-text-small pl-4 max-w-[50%]">
+                          {slide.description}
+                        </p>
+                        <button className="text-nilor-white ml-4 bg-transparent border rounded-full px-7 py-3 hover:bg-nilor-accent hover:border-nilor-accent font-bold w-fit">
+                          Visit
+                        </button>
+                      </>
+                    )}
                 </div>
               </div>
             </div>

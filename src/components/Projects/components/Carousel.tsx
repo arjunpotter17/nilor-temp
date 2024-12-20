@@ -1,74 +1,152 @@
-"use client";
-import React from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
-import useEmblaCarousel from 'embla-carousel-react'
-import ClassNames from 'embla-carousel-class-names'
+import React, { useCallback, useEffect, useRef } from "react";
 import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './CarouselButtons'
-import { DotButton, useDotButton } from './CarouselProgress'
+  EmblaCarouselType,
+  EmblaEventType,
+  EmblaOptionsType,
+} from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import { NextButton, PrevButton, usePrevNextButtons } from "./CarouselButtons";
+import Image from "next/image";
 
-type PropType = {
-  slides: number[]
-  options?: EmblaOptionsType
+const TWEEN_FACTOR_BASE = 0.2;
+
+interface Project {
+  id: number;
+  name: string;
+  title: string;
+  pre: string;
+  description: string;
+  buttonText: string;
+  fullText: string;
 }
 
-const Carousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [ClassNames()])
+type PropType = {
+  slides: Project[];
+  options?: EmblaOptionsType;
+};
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi)
+const EmblaCarousel: React.FC<PropType> = (props) => {
+  const { slides, options } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const tweenFactor = useRef(0);
+  const tweenNodes = useRef<HTMLElement[]>([]);
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
+
+  const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
+    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
+      return slideNode.querySelector(".embla__parallax__layer") as HTMLElement;
+    });
+  }, []);
+
+  const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
+    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
+  }, []);
+
+  const tweenParallax = useCallback(
+    (emblaApi: EmblaCarouselType, eventName?: EmblaEventType) => {
+      const engine = emblaApi.internalEngine();
+      const scrollProgress = emblaApi.scrollProgress();
+      const slidesInView = emblaApi.slidesInView();
+      const isScrollEvent = eventName === "scroll";
+
+      emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+        let diffToTarget = scrollSnap - scrollProgress;
+        const slidesInSnap = engine.slideRegistry[snapIndex];
+
+        slidesInSnap.forEach((slideIndex) => {
+          if (isScrollEvent && !slidesInView.includes(slideIndex)) return;
+
+          if (engine.options.loop) {
+            engine.slideLooper.loopPoints.forEach((loopItem) => {
+              const target = loopItem.target();
+
+              if (slideIndex === loopItem.index && target !== 0) {
+                const sign = Math.sign(target);
+
+                if (sign === -1) {
+                  diffToTarget = scrollSnap - (1 + scrollProgress);
+                }
+                if (sign === 1) {
+                  diffToTarget = scrollSnap + (1 - scrollProgress);
+                }
+              }
+            });
+          }
+
+          const translate = diffToTarget * (-1 * tweenFactor.current) * 100;
+          const tweenNode = tweenNodes.current[slideIndex];
+          tweenNode.style.transform = `translateX(${translate}%)`;
+        });
+      });
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    setTweenNodes(emblaApi);
+    setTweenFactor(emblaApi);
+    tweenParallax(emblaApi);
+
+    emblaApi
+      .on("reInit", setTweenNodes)
+      .on("reInit", setTweenFactor)
+      .on("reInit", tweenParallax)
+      .on("scroll", tweenParallax)
+      .on("slideFocus", tweenParallax);
+  }, [emblaApi, tweenParallax]);
 
   return (
     <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <img
-                className="embla__slide__img"
-                src={`https://picsum.photos/600/350?v=${index}`}
-                alt="Your alt text"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
-
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
+      </div>
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {slides.map((index) => (
+            <div className="embla__slide " key={index.id}>
+              <div className="embla__parallax">
+                {/* <div className="embla__parallax__layer">
+                  <img
+                    className="embla__slide__img embla__parallax__img"
+                    src={`https://picsum.photos/600/350?v=${index.id}`}
+                    alt={index.title}
+                  />
+                </div> */}
+                <div className="embla__parallax__layer flex flex-col gap-y-5 text-nilor-white ">
+                  <div className="relative embla__slide__img ">
+                    <Image
+                      fill
+                    
+                      src={`https://picsum.photos/600/350?v=${index.id}`}
+                      alt={index.title}
+                    />
+                  </div>
+                  <p className="text-landing-section-pre">{index.title}</p>
+                  <p className="text-landing-section-text">
+                    {index.description}
+                  </p>
+                  <button className="text-nilor-white bg-transparent border rounded-full px-7 py-3 hover:bg-nilor-accent hover:border-nilor-accent font-bold w-fit">
+                    Visit
+                  </button>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
-      <div className='flex flex-col text-nilor-white gap-y-10'>
-          <h1 className='text-landing-section-title'>Solution types</h1>
-          <p className='text-landing-section-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptatum possimus repellendus saepe sapiente, ab molestias aliquid rem nisi esse ratione itaque ut assumenda. Tempora ipsa doloribus, sapiente adipisci deserunt vel aliquam quas sint recusandae cum nulla aliquid pariatur magni architecto veritatis vero dolorum maxime corporis perferendis? Ratione commodi.</p>
-      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default EmblaCarousel;

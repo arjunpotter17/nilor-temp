@@ -2,8 +2,8 @@ import ImmersiveExp from "@/components/Experiences";
 import Film from "@/components/Film";
 import Footer from "@/components/Footer";
 import HeroBanner from "@/components/HeroSection";
-import Insights from "@/components/Insights";
 import Platform from "@/components/Platform";
+import Projects from "@/components/Projects";
 
 export default function Solutions() {
     const ImmersiveExpData = {
@@ -35,7 +35,7 @@ export default function Solutions() {
     <ImmersiveExp {...ImmersiveExpData}/>
     <Film/>
     <ImmersiveExp {...LiveEventsData}/>
-    <Insights/>
+    <Projects/>
     <Footer/>
 
     </div>

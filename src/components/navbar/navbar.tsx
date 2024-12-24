@@ -17,6 +17,8 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  console.log('this is pathname', pathname.replace('/','').toLocaleLowerCase())
+
   return (
     <header className="bg-nilor-black sticky top-0 z-50 h-[72px] flex item-center justify-center">
       <nav className="container mx-auto flex items-center justify-between w-full max-w-[1152px]">
@@ -31,7 +33,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 className={`text-nilor-offwhite text-sm hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 ${
-                  pathname === item.link ? "hover:text-nilor-accent font-bold" : ""
+                  pathname.toLocaleLowerCase() === item.link ? "!text-nilor-accent font-bold" : ""
                 }`}
                 href={item.link}
               >

@@ -45,8 +45,8 @@ export default function TabSwitch({
       className={`w-full flex flex-col items-center text-nilor-white ${containerClassNames}`}
     >
       <div className="flex flex-col gap-y-20 items-center">
-      <div className="max-w-[1152px] text-center">
-        {pre && <p className="text-nilor-pre">{pre}</p>}
+      <div className="max-w-[1152px] text-center gap-y-4 flex flex-col">
+        {pre && <p className="text-nilor-pre">{pre.toLocaleLowerCase()}</p>}
         <h1 className="text-nilor-title font-nilor-semibold">
           {title}
         </h1>

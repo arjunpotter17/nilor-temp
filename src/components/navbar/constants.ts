@@ -15,6 +15,10 @@ export const navbarItems = [
     link: '/services',
   },
   {
+    name: 'Projects',
+    link: '/projects',
+  },
+  {
     name: 'Learn',
     link: '/learn',
   },

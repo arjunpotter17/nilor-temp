@@ -35,9 +35,9 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
           className="w-full min-h-[calc(100vh-100px)] bg-cover flex items-center justify-center"
           style={{ backgroundImage: `url(${src})` }}
         >
-          <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10">
-            <p className="text-landing-section-pre">{pre}</p>
-            <p className="text-landing-section-title max-w-[60%] font-nilor-semibold">
+          <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-6">
+            <p className="text-nilor-pre">{pre}</p>
+            <p className="text-nilor-title max-w-[60%] font-nilor-semibold">
               {title}
             </p>
           </div>
@@ -58,8 +58,8 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
            
           >
             <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10">
-              <p className="text-landing-section-pre">{pre}</p>
-              <p className="text-landing-section-title max-w-[60%] font-nilor-semibold">
+              <p className="text-nilor-pre">{pre}</p>
+              <p className="text-nilor-title max-w-[60%] font-nilor-semibold">
                 {title}
               </p>
             </div>
@@ -68,9 +68,11 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
       ) : null}
 
       {text && (
-        <p className="text-nilor-hero-text font-nilor-light text-nilor-white max-w-[1152px] w-full text-justify pt-32">
+        <div className="max-w-[1152px] flex justify-center items-center pt-32">
+        <p className="text-nilor-hero-text font-nilor-light text-nilor-white  w-[85%] text-justify">
           {text}
         </p>
+        </div>
       )}
     </div>
   );

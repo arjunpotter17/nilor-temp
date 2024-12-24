@@ -16,7 +16,7 @@ export default {
         "nilor-white":"#ffffff",
         "nilor-grey": "#D3D3D3",
         "nilor-accent":"#F8607D",
-        "nilor-secondary":"#F8607D"
+        "nilor-secondary":"#1d2939",
       },
       boxShadow: {
         'soft-glow': '0 4px 20px rgba(255, 255, 255, 0.5)', // Custom white glow shadow

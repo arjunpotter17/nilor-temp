@@ -23,7 +23,10 @@ Turning imagination into reality through powerful tools"
       </div>
       <Platform slideCount={6} pre="Approach" title="Some text about detailed approach"/>
       <Clients/>
+      <div className="bg-nilor-secondary">
       <Overview/>
+      </div>
+    
       <Footer/>
     </div>
   );

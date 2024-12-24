@@ -11,15 +11,17 @@ interface ExpDataType {
 
 export default function ImmersiveExp({pre, title, para, buttonText, imgSrc, reverse = false}:ExpDataType) {
   return (
-    <div className="bg-nilor-accent w-full px-4 md:px-0 py-32 flex justify-center items-center">
+    <div className="bg-nilor-secondary w-full px-4 md:px-0 py-32 flex justify-center items-center text-nilor-white">
       <div className={`w-full flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} lg:flex-row lg:justify-between lg:items-center max-w-[1152px]`}>
-        <div className="flex flex-col text-nilor-black lg:max-w-[50%] gap-y-10">
-          <p className="text-landing-section-pre">{pre}</p>
-          <h1 className="text-landing-section-title">{title}</h1>
-          <p className="text-landing-section-text">
+        <div className="flex flex-col lg:max-w-[50%] gap-y-10">
+          <div className="flex flex-col items-start gap-y-4">
+          <p className="text-nilor-pre text-nilor-grey">{pre}</p>
+          <h1 className="text-nilor-title">{title}</h1>
+          </div>
+          <p className="text-nilor-text">
             {para}
           </p>
-          <button className="text-nilor-black bg-transparent border border-nilor-black rounded-full px-7 py-3 hover:bg-nilor-black hover:border-nilor-black hover:text-nilor-white font-bold w-fit">
+          <button className="bg-transparent border border-nilor-white rounded-full px-7 py-3 hover:bg-nilor-black hover:border-nilor-black hover:text-nilor-white font-bold w-fit">
             {buttonText}
           </button>
         </div>

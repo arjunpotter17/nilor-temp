@@ -9,7 +9,6 @@ interface ProjectImageProps {
 export const ProjectImage: React.FC<ProjectImageProps> = ({
   title,
   imageUrl,
-  videoUrl,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);

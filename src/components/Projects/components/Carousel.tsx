@@ -96,6 +96,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on('reInit', tweenOpacity)
       .on('scroll', tweenOpacity)
       .on('slideFocus', tweenOpacity)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emblaApi, tweenOpacity])
 
   return (

@@ -45,6 +45,7 @@ export const TimelineModal = ({ phase, isOpen, onClose, buttonRef }: TimelineMod
       modal.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
       modal.style.transform = 'translate(0, 0) scale(1)';
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const handleClose = () => {

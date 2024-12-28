@@ -12,7 +12,12 @@ export default function Demo() {
   const scrollToForm = () => {
     setShowForm(true);
     setTimeout(() => {
-      formRef.current?.scrollIntoView({ behavior: "smooth" });
+      const topOffset = 120; // Adjust for fixed header or padding
+      const element = formRef.current;
+      if (element) {
+        const topPosition = element.getBoundingClientRect().top + window.scrollY - topOffset;
+        window.scrollTo({ top: topPosition, behavior: "smooth" });
+      }
     }, 100);
   };
   return (

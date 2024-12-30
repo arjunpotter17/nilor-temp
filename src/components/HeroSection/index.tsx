@@ -1,6 +1,7 @@
 interface HeroPropsBase {
-  text: string;
+  text?: string;
   src: string;
+  titleText?:string
 }
 
 interface HeroPropsVideo extends HeroPropsBase {
@@ -17,7 +18,7 @@ interface HeroPropsImage extends HeroPropsBase {
 
 type HeroProps = HeroPropsVideo | HeroPropsImage;
 
-function HeroBanner({ type, text, src, pre, title }: HeroProps) {
+function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
   return (
     <div className="w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center relative">
       {type == "video" ? (
@@ -40,7 +41,17 @@ function HeroBanner({ type, text, src, pre, title }: HeroProps) {
             <p className="text-nilor-title max-w-[60%] font-nilor-semibold">
               {title}
             </p>
-          </div>
+            {titleText && (
+  <p className="text-nilor-hero-text font-nilor-light text-nilor-white w-[60%] text-justify whitespace-pre-wrap">
+    {titleText.split('\n').map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ))}
+  </p>
+)}
+  </div>
         </div>
       ) : type === "bgVideo" ? (
         <>

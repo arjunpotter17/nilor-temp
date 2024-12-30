@@ -45,7 +45,9 @@ const Navbar = () => {
             <button className="font-bold text-nilor-white transform hover:scale-95 transition-all duration-200 bg-transparent hover:bg-nilor-accent rounded-full px-5 py-2">
               Login
             </button>
-            <button className="text-nilor-white text-sm bg-transparent border rounded-full px-5 py-2 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
+            <button
+            onClick={() => router.push("/contact")}
+             className="text-nilor-white text-sm bg-transparent border rounded-full px-5 py-2 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200">
               Contact Us
             </button>
             <button

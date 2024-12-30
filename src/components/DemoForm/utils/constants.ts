@@ -6,6 +6,7 @@ export const INITIAL_DATA = {
     industry: '',
     country: '',
     businessType: '',
+    comments: ''
   };
   
   export const INDUSTRIES = [

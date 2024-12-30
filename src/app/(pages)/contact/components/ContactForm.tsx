@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { FormField } from './FormField';
-import { Input } from './Input';
-import { CustomSelect } from './CustomSelect';
-import { INDUSTRIES, COUNTRIES, BUSINESS_TYPES, INITIAL_DATA } from './utils/constants';
-import { FormData } from './types/form';
-import { validateField } from './utils/validations';
+import { FormField } from '../../../../components/DemoForm/FormComponents/FormField';
+import { Input } from '../../../../components/DemoForm/FormComponents/Input';
+import { CustomSelect } from '../../../../components/DemoForm/FormComponents/CustomSelect';
+import { INDUSTRIES, COUNTRIES, INITIAL_DATA } from '../../../../lib/utils';
+import { FormData } from '../../../../lib/types';
+import { validateField } from '../../../../lib/validations';
 import { motion } from 'framer-motion';
 
-export default function ContactForm() {
+export default function ContactUsForm() {
   const [formData, setFormData] = useState<FormData>(INITIAL_DATA);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
@@ -165,22 +165,22 @@ export default function ContactForm() {
             onBlur={() => handleBlur('country')}
             error={!!errors.country && touched.country}
             options={COUNTRIES}
-            placeholder="Country"
+            placeholder="This is not changing brooo"
           />
         </FormField>
 
         <FormField
-          label="Business Type"
+          label="Message"
           error={errors.businessType}
           touched={touched.businessType}
         >
-          <CustomSelect
-            value={formData.businessType}
-            onChange={value => handleChange('businessType', value)}
-            onBlur={() => handleBlur('businessType')}
+          <Input
+            type="text"
+            value={formData.company}
+            onChange={e => handleChange('company', e.target.value)}
+            onBlur={() => handleBlur('company')}
+            placeholder="What's your company called?"
             error={!!errors.businessType && touched.businessType}
-            options={BUSINESS_TYPES}
-            placeholder="Business Type"
           />
         </FormField>
 

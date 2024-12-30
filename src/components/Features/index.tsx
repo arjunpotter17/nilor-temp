@@ -24,7 +24,7 @@ export default function Features() {
   return (
     <div className="w-full bg-nilor-secondary flex flex-col items-center py-10 gap-y-10">
       <div className="flex flex-col gap-y-8 w-full items-center">
-        <p className="text-nilor-pre text-nilor-grey text-justify">Features</p>
+        <p className="text-nilor-pre text-nilor-grey text-justify">features</p>
         <h1 className="text-nilor-title text-nilor-white mb-2">
           Empowering Creation
         </h1> 

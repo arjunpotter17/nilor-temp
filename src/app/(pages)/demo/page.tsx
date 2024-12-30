@@ -2,7 +2,7 @@
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import DemoForm from "./components/demoForm";
+import DemoForm from "@/components/DemoForm";
 
 export default function Demo() {
 
@@ -58,7 +58,7 @@ export default function Demo() {
           showForm ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}
       >
-        {showForm && <DemoForm />}
+        {showForm && <DemoForm hiddenFields={['comments']} />}
       </div>
       <Footer />
     </div>

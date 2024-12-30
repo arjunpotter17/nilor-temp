@@ -3,7 +3,7 @@ function NilorLabs() {
     <div className="w-full min-h-[800px] flex flex-col justify-center items-center">
       <div className="flex flex-col gap-y-8 w-full items-center">
         <p className="text-nilor-pre text-nilor-grey text-justify">
-          Nilor Labs
+          nilor labs
         </p>
         <h1 className="text-nilor-title text-nilor-white mb-2">
           Always State-of-the Art

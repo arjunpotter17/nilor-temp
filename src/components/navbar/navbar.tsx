@@ -17,8 +17,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log('this is pathname', pathname.replace('/','').toLocaleLowerCase())
-
   return (
     <header className="bg-nilor-black sticky top-0 z-50 h-[72px] flex item-center justify-center">
       <nav className="container mx-auto flex items-center justify-between w-full max-w-[1152px]">

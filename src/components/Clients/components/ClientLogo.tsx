@@ -4,7 +4,7 @@ interface ClientLogoProps {
 }
 
 export const ClientLogo = ({ name, logo }: ClientLogoProps) => (
-  <div className="inline-flex w-[200px] h-24 bg-black rounded-lg shadow-md p-4 items-center justify-center mx-6 transition-transform hover:scale-105">
+  <div className="inline-flex w-[200px] h-24 bg-black rounded-lg shadow-md p-4 items-center justify-center mx-6 transition-transform">
     {(
       <img
         src={logo}

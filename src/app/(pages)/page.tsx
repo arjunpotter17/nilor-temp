@@ -1,4 +1,5 @@
 import Clients from "@/components/Clients";
+import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import HeroBanner from "@/components/HeroSection";
 import Insights from "@/components/Insights";
@@ -53,6 +54,7 @@ export default function Home() {
         para="All-encompassing software. Fundamental hardware. Complete support and learning services. A fully integrated ecosystem for seamlessly delivering complex graphics in real-time to any surface."
         tabs={tabs}
       />
+      <Features/>
       <NilorLabs />
       <Insights />
       <Footer />

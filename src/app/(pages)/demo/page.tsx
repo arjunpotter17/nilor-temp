@@ -22,7 +22,7 @@ export default function Demo() {
   };
   return (
     <div className="w-full flex flex-col min-h-[calc(100vh-100px)] h-full items-center text-nilor-white gap-y-24">
-      <h1 className="w-full max-w-[1152px] text-nilor-title mt-24 font-nilor-bold">
+      <h1 className="w-full max-w-[1152px] nilor-title mt-24 font-nilor-bold">
         Book a Demo
       </h1>
       <div className="bg-nilor-accent w-full flex justify-center py-10">
@@ -31,15 +31,15 @@ export default function Demo() {
             <Image fill src="/demo.webp" alt="demo" />
           </div>
           <div className=" flex flex-col gap-y-10 items-start flex-grow-0">
-            <p className="text-nilor-title-sm">
+            <p className="nilor-title-sm">
               Discover the Power of the Nilor Ecosystem
             </p>
-            <p className="text-nilor-text-small">
+            <p className="nilor-text-small">
               Have a creative idea or upcoming project you&apos;re looking to
               bring to life? Book a demo with our team and discover the power of
               the platform for yourself.{" "}
             </p>
-            <p className="text-nilor-text-small">
+            <p className="nilor-text-small">
               We can take you through the full lifecycle of a project,
               specialising in deep technical knowledge and creative ideation.
               Our unique end-to-end support can take you from consultation,

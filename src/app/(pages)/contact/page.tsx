@@ -32,8 +32,8 @@ export default function Contact() {
       />
       <div className="flex flex-col w-full bg-nilor-offwhite items-center justify-center py-20">
         <div className="max-w-[1152px] text-nilor-black gap-y-5 flex flex-col">
-          <h1 className="text-nilor-title">Get in Touch</h1>
-          <p className="text-nilor-text">
+          <h1 className="nilor-title">Get in Touch</h1>
+          <p className="nilor-text">
             Complete the form and a member of our team will get back to you as
             quickly as possible.
           </p>

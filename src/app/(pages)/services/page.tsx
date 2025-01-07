@@ -3,7 +3,8 @@ import ImmersiveExp from "@/components/Experiences";
 import Footer from "@/components/Footer";
 import HeroBanner from "@/components/HeroSection";
 import Overview from "@/components/Overview";
-import Platform from "@/components/Platform";
+import Projects from "@/components/Projects";
+import {projects} from '@/components/Projects/constants'
 
 export default function Services() {
   return (
@@ -18,16 +19,29 @@ export default function Services() {
 Turning imagination into reality through powerful tools"
       />
       <div className="flex flex-col">
-      <ImmersiveExp pre="Technical Services" title="Power to Create" para="We provide the sophisticated infrastructure and tools that power immersive experiences. From hardware integration to AI-powered content generation, our technical solutions enable seamless creation and delivery of dynamic visual environments" imgSrc="/services-creative.webp" buttonText="Learn More"/>
-      <ImmersiveExp reverse pre="Creative Services" title="Art in Motion" para="Our veteran VFX artists transform spaces through stunning visual narratives, from concept development to final execution. We craft custom content that pushes the boundaries of what's possible in immersive environments" imgSrc="/services-technical.webp" buttonText="Learn More"/>
+        <ImmersiveExp
+          pre="Technical Services"
+          title="Power to Create"
+          para="We provide the sophisticated infrastructure and tools that power immersive experiences. From hardware integration to AI-powered content generation, our technical solutions enable seamless creation and delivery of dynamic visual environments"
+          imgSrc="/services-creative.webp"
+          buttonText="Learn More"
+        />
+        <ImmersiveExp
+          reverse
+          pre="Creative Services"
+          title="Art in Motion"
+          para="Our veteran VFX artists transform spaces through stunning visual narratives, from concept development to final execution. We craft custom content that pushes the boundaries of what's possible in immersive environments"
+          imgSrc="/services-technical.webp"
+          buttonText="Learn More"
+        />
       </div>
-      <Platform slideCount={6} pre="Approach" title="Some text about detailed approach"/>
-      <Clients/>
+      <Projects title="Crafted with Vision, Delivered with Precision" pre="approach" projects={projects}/>
+      <Clients />
       <div className="bg-nilor-secondary">
-      <Overview/>
+        <Overview />
       </div>
-    
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

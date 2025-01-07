@@ -49,8 +49,8 @@ const TeamSection: React.FC = () => {
     <section className="py-24 max-w-[1152px]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-nilor-pre text-nilor-grey">our team</h2>
-          <h3 className="text-nilor-title mx-auto leading-tight text-nilor-black">
+          <h2 className="nilor-pre text-nilor-grey">our team</h2>
+          <h3 className="nilor-title mx-auto leading-tight text-nilor-black">
             Meet the people behind the next dimension of entertainment
           </h3>
          

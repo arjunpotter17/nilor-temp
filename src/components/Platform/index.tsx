@@ -20,7 +20,9 @@ interface Project {
   description: string;
   buttonText: string;
   fullText: string;
+  url:string
 }
+
 
 const projects: Project[] = [
   {
@@ -30,6 +32,7 @@ const projects: Project[] = [
     pre: "Virtual Reality",
     description: "Immersive virtual reality solution for architectural visualization.",
     buttonText: "Explore VR",
+    url:"/disseny.webp",
     fullText: "Our innovative VR experience allows architects and clients to walk through designs before they're built, revolutionizing the way we approach architectural projects."
   },
   {
@@ -39,6 +42,7 @@ const projects: Project[] = [
     pre: "Artificial Intelligence",
     description: "Cutting-edge AI technology for creating lifelike animations.",
     buttonText: "See AI in Action",
+    url:"/disseny.webp",
     fullText: "Our AI-powered animation tool brings characters to life with unprecedented realism, saving time and resources in the animation process."
   },
   {
@@ -48,6 +52,7 @@ const projects: Project[] = [
     pre: "Data Science",
     description: "Dynamic and interactive data visualization platform.",
     buttonText: "Visualize Data",
+    url:"/disseny.webp",
     fullText: "Our interactive data visualization platform transforms complex datasets into intuitive, engaging visual stories, making data accessible to everyone."
   },
   {
@@ -57,6 +62,7 @@ const projects: Project[] = [
     pre: "Augmented Reality",
     description: "AR-enhanced learning experiences for students of all ages.",
     buttonText: "Learn with AR",
+    url:"/disseny.webp",
     fullText: "Our augmented reality educational tools bring textbooks to life, creating immersive learning experiences that improve engagement and retention."
   },
   {
@@ -66,6 +72,7 @@ const projects: Project[] = [
     pre: "Holographic Technology",
     description: "Next-generation 3D holographic display technology.",
     buttonText: "See Holograms",
+    url:"/disseny.webp",
     fullText: "Our 3D holographic displays create stunning, floating images that can be viewed from any angle, perfect for advertising, entertainment, and scientific visualization."
   }
 ];
@@ -73,17 +80,16 @@ const projects: Project[] = [
 export default function Platform({
   pre = "OUR PLATFORM", // Default value for title
   title = "Visionary Solutions", // Default value for subtitle
-  carouselOptions = { loop: true, dragFree: true }, // Default carousel options
 }: PlatformProps) {
  
   return (
     <div className="flex flex-col w-full items-center gap-y-24">
       <div className="flex flex-col w-full gap-y-4">
-      <p className="w-full text-center text-nilor-pre text-nilor-grey">{pre.toLocaleLowerCase()}</p>
-      <p className="w-full text-center text-nilor-white text-nilor-title">{title}</p>
+      <p className="w-full text-center nilor-pre text-nilor-grey">{pre.toLocaleLowerCase()}</p>
+      <p className="w-full text-center text-nilor-white nilor-title">{title}</p>
       </div>
-      <div className="flex overflow-x-auto px-4 max-w-[1152px] w-full gap-x-3 h-full">
-        <Carousel slides={projects} options={carouselOptions} />
+      <div className="flex flex-col w-full items-center ~gap-y-1/8">
+        <Carousel slides={projects} options={{loop: true}} />
       </div>
     </div>
   );

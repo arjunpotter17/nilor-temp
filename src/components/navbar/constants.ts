@@ -22,10 +22,10 @@ export const navbarItems = [
     name: 'Learn',
     link: '/learn',
   },
-  {
-    name: 'Insights',
-    link: '/insights',
-  },
+  // {
+  //   name: 'Insights',
+  //   link: '/insights',
+  // },
   {
     name: 'About',
     link: '/about',

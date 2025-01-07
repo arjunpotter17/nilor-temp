@@ -1,3 +1,4 @@
+import PreTitle from "../PreTitle/Index";
 import { VideoShowcase } from "./components/VideoShowcase";
 
 export default function Features() {
@@ -9,7 +10,7 @@ export default function Features() {
           "Rapidly explore latent space – start with an idea, and our tools let you effortlessly discover connections and happy accidents a-plenty!",
           "Once you’ve discovered a style, import the collection into our pro user tools to instantly create high fidelity artworks for immersive exhibition canvases",
         ],
-        videoUrl: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`
+        videoUrl: `https://pub-05f59bf6323d4ee3a29185a0d7e91752.r2.dev/zenerator.mp4`
       };
     const feature2 = {
         title: "Need a title",
@@ -19,16 +20,12 @@ export default function Features() {
           "Directly use images from our cloud platform to generate video",
           "Then upscale it for large, high resolution, immersive displays",
         ],
-        videoUrl: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`
+        imageUrl: `/zenerator-workflow.png`
     }
   return (
     <div className="w-full bg-nilor-secondary flex flex-col items-center py-10 gap-y-10">
-      <div className="flex flex-col gap-y-8 w-full items-center">
-        <p className="text-nilor-pre text-nilor-grey text-justify">features</p>
-        <h1 className="text-nilor-title text-nilor-white mb-2">
-          Empowering Creation
-        </h1> 
-      </div>
+      <PreTitle pre="features" title="Empowering Creation"/>
+      
       <div className="max-w-[1152px]">
       <VideoShowcase {...feature1} />
       <VideoShowcase {...feature2} inverted />

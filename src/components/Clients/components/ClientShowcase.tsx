@@ -1,12 +1,10 @@
-import { clients } from '../data';
-import { ClientLogo } from './ClientLogo';
+import { clients } from "../data";
+import { ClientLogo } from "./ClientLogo";
 
 export const ClientShowcase = () => {
   return (
-    <section className=" py-20">
+    <section className=" ~py-5/20">
       <div className="container mx-auto px-4">
-        
-
         <div className="relative">
           {/* Gradient Overlays */}
           <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-nilor-secondary to-transparent z-10"></div>

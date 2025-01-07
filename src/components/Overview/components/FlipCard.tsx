@@ -17,7 +17,7 @@ export default function FlipCard({title, content}:{title: string, content:string
         {/* Front of the card */}
         <Card className="absolute w-full h-full backface-hidden bg-gradient-to-br from-blue-900 to-purple-800 border-none">
           <CardContent className="flex items-center justify-center h-full">
-            <h2 className="text-nilor-text font-bold text-white w-full text-center">{title}</h2>
+            <h2 className="nilor-text font-bold text-white w-full text-center">{title}</h2>
           </CardContent>
         </Card>
 

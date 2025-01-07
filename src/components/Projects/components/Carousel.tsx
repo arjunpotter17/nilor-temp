@@ -8,6 +8,7 @@ import {
 import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./CarouselButtons";
 import Image from "next/image";
+import NilorButton from "@/components/NilorButton";
 
 const TWEEN_FACTOR_BASE = 0.84;
 
@@ -16,6 +17,7 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 
 interface Project {
   id: number;
+  url:string;
   name?: string;
   title?: string;
   pre?: string;
@@ -101,7 +103,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   return (
     <div className="embla">
-      <div className="embla__controls mb-10">
+      <div className="embla__controls ~mb-5/10">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
@@ -112,11 +114,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((slide) => (
             <div className="embla__slide" key={slide.id}>
               <div className="embla__parallax">
-                <div className="embla__parallax__layer flex flex-col gap-y-5 text-nilor-white ">
+                <div className="embla__parallax__layer flex flex-col !justify-start gap-y-5 text-nilor-white">
                   <div className="relative embla__slide__img ">
                     <Image
                       fill
-                      src={`https://picsum.photos/600/350?v=${slide.id}`}
+                      src={slide.url}
                       alt={slide.title || (slide.id as unknown as string)}
                     />
                      
@@ -126,19 +128,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     slide.title &&
                     slide.description &&
                     slide.buttonText && (
-                      <div className="flex flex-col mt-10 pl-4">
-                        <p className="text-nilor-pre text-nilor-grey">
+                      <div className="flex flex-col ~mt-2/10 pl-4">
+                        <p className="nilor-pre text-nilor-accent">
                           {slide.pre}
                         </p>
-                        <p className="text-nilor-section-title mt-5">
+                        <p className="nilor-section-title ~mt-1/5">
                           {slide.title}
                         </p>
-                        <p className="text-nilor-section-text max-w-[50%] mt-10">
+                        <p className="nilor-section-text max-w-full md:max-w-[50%] mt-10">
                           {slide.description}
                         </p>
-                        <button className="text-nilor-white bg-transparent mt-10 border rounded-full px-7 py-3 hover:bg-nilor-accent hover:border-nilor-accent font-bold w-fit">
-                          Visit
-                        </button>
+                        
+                        <NilorButton text="More" className="!mt-10"/>
                       </div>
                     )}
                 </div>

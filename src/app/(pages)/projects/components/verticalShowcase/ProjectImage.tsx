@@ -30,7 +30,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
     <div
       className={`overflow-hidden rounded-lg transition-all duration-500 cursor-pointer
         ${isHovered ? "scale-125 z-50" : "scale-100"}
-        w-1/2 aspect-video`}
+        w-full md:w-1/2 aspect-video`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

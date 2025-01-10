@@ -1,9 +1,6 @@
 import Footer from "@/components/Footer";
 import HeroBanner from "@/components/HeroSection";
 import Projects from "@/components/Projects";
-import {projects} from '@/components/Projects/constants'
-
-
 
 export default function Learn() {
     const tutorials = [

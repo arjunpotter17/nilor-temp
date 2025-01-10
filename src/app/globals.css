@@ -82,6 +82,22 @@ body {
   animation: modalEntry 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 4px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px 4px rgba(0, 255, 255, 0.5);
+  }
+}
+
+.glowing-circle {
+  animation: glow 2s infinite;
+}
+
 @media (max-width: 768px) {
   @keyframes expand {
     from { transform: scaleY(0); }

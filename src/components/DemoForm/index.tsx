@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { FormField } from "./FormComponents/FormField";
@@ -13,15 +13,18 @@ import {
 import { FormData } from "./types/form";
 import { validateField } from "./utils/validations";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 interface formProps {
   formClasses?: string;
   hiddenFields?: Array<keyof FormData>;
+  setShowForm:Dispatch<SetStateAction<boolean>>
 }
 
 export default function ContactForm({
   formClasses,
   hiddenFields = [],
+  setShowForm
 }: formProps) {
   const [formData, setFormData] = useState<FormData>(INITIAL_DATA);
   const [errors, setErrors] = useState<Partial<FormData>>({});
@@ -61,7 +64,7 @@ export default function ContactForm({
     setIsFormValid(isValid);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const newErrors: Partial<FormData> = {};
@@ -78,10 +81,30 @@ export default function ContactForm({
     setTouched(allTouched);
 
     if (!Object.values(newErrors).some((error) => error !== "")) {
-      console.log("Form submitted:", formData);
-      setFormData(INITIAL_DATA);
-      setErrors({});
-      setTouched({});
+      try {
+        const response = await fetch(
+          "/api/contact-form",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          }
+        );
+
+        if (response.ok) {
+          toast.success("Thanks! We'll be in touch!")
+          setFormData(INITIAL_DATA);
+          setErrors({});
+          setTouched({});
+          setShowForm(false);
+        } else {
+          toast.error("Something went wrong. Consider reach out via email");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        toast.error("Something went wrong. Consider reach out via email");
+        
+      }
     }
   };
 

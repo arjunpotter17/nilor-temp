@@ -48,7 +48,7 @@ const Navbar = () => {
             Login
           </button> */}
           <button
-            onClick={() => router.push("/contact")}
+            onClick={() => router.push("/about")}
             className="text-nilor-white text-sm bg-transparent border rounded-full px-5 py-2 font-bold hover:bg-nilor-accent hover:border-nilor-accent transform hover:scale-95 transition-all duration-200"
           >
             Contact Us

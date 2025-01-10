@@ -2,7 +2,7 @@ import ImmersiveExp from "@/components/Experiences";
 import Film from "@/components/Film";
 import Footer from "@/components/Footer";
 import HeroBanner from "@/components/HeroSection";
-import Projects from "@/components/Projects";
+import SingleProject from "@/components/SingleProject";
 
 interface Project {
   id: number;
@@ -21,7 +21,7 @@ export default function Solutions() {
     para: "nilor transforms spaces into dynamic, living worlds, delivering immersive visual experiences across the world’s most ambitious displays.",
     title: "Venues are Ready for Cutting Edge AI",
     buttonText: "Learn More",
-    imgSrc: "/solutions-immexp.webp",
+    imgSrc: "/dynamic-worlds.png",
   };
 
   const LiveEventsData = {
@@ -32,10 +32,8 @@ export default function Solutions() {
     imgSrc: "/reality-cubed.jpg",
   };
 
-  const solutions: Project[] = [
-   
-    {
-      id: 2,
+  const singleProject: Project = {
+    id: 2,
       name: "Project 2",
       title: "Sweet Dreams",
       pre: "Aviva studios, Manchester",
@@ -45,8 +43,8 @@ export default function Solutions() {
       url: "/sweet-dreams.jpg",
       fullText:
         "Our AI-powered animation tool brings characters to life with unprecedented realism, saving time and resources in the animation process.",
-    },
-  ];
+   
+  }
   return (
     <div className="flex flex-col w-full gap-y-[100px] md:gap-y-[200px]">
       <HeroBanner
@@ -56,11 +54,7 @@ export default function Solutions() {
         title="Nilor empowers immersive creation"
         text={`We empower people to collaborate and harmoniously bring bold ideas to life - without worrying about the tech. Our tools turn complex systems into intuitive workflows, so teams can focus on creating refined, real-time experiences together. `}
       />
-      <Projects
-        pre="Our Platform"
-        projects={solutions}
-        title="Visionary Solutions"
-      />
+      <SingleProject pre={singleProject.pre} title={singleProject.title} desc={singleProject.description} btnTxt={singleProject.buttonText} linkTo="" imageUrl={singleProject.url} />
 
       <ImmersiveExp {...ImmersiveExpData} />
       <Film />

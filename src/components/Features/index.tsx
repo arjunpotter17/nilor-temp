@@ -1,4 +1,4 @@
-import PreTitle from "../PreTitle/Index";
+import PreTitle from "../PreTitle";
 import { VideoShowcase } from "./components/VideoShowcase";
 
 export default function Features() {

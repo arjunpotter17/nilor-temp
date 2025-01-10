@@ -1,7 +1,7 @@
 export default function Mission() {
   return (
-    <div className="flex flex-col gap-y-10 max-w-[1152px] text-nilor-black py-28">
-      <div className="w-full flex flex-col items-center text-justify gap-y-4 px-[7.5%]">
+    <div className="flex flex-col gap-y-10 max-w-[1152px] text-nilor-black pt-28 ~px-4/0">
+      <div className="w-full flex flex-col items-center text-justify gap-y-4">
         <h1 className=" nilor-title self-start">Our Mission</h1>
         <p className=" nilor-text-small">
           We are dedicated to transforming physical spaces through the power of

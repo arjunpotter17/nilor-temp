@@ -7,7 +7,8 @@ interface Project {
   description: string;
   buttonText: string;
   fullText: string;
-  url:string
+  url:string;
+  btnLink?:string;
 }
 
 export const projects: Project[] = [
@@ -39,6 +40,7 @@ export const projects: Project[] = [
     description: "Large format content and content creation tools.",
     buttonText: "Visualize Data",
     url:"/zenon.png",
+    btnLink: '/projects/zenon%20and%20trove',
     fullText: "Our interactive data visualization platform transforms complex datasets into intuitive, engaging visual stories, making data accessible to everyone."
   },
 ];

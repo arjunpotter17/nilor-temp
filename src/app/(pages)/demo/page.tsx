@@ -32,7 +32,7 @@ export default function Demo() {
           </div>
           <div className=" flex flex-col gap-y-10 items-start flex-grow-0">
             <p className="nilor-title-sm">
-              Discover the Power of the Nilor Ecosystem
+              Discover the Power of the nilor Ecosystem
             </p>
             <p className="nilor-text-small">
               Have a creative idea or upcoming project you&apos;re looking to

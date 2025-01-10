@@ -1,4 +1,4 @@
-import PreTitle from "../PreTitle/Index";
+import PreTitle from "../PreTitle";
 
 export default function Film() {
   const src = "/solutions-visual-exp.png";

@@ -9,6 +9,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./CarouselButtons";
 import Image from "next/image";
 import NilorButton from "@/components/NilorButton";
+import { useRouter } from "next/navigation";
 
 const TWEEN_FACTOR_BASE = 0.84;
 
@@ -23,15 +24,18 @@ interface Project {
   pre?: string;
   description?: string;
   buttonText?: string;
+  btnLink?:string;
 }
 
 type PropType = {
-  slides: Project[];
+  slides?: Project[];
   options?: EmblaOptionsType;
+  tutorials?:string[];
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+  const { slides, options, tutorials } = props;
+  const router = useRouter();
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
 
@@ -109,9 +113,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
-      <div className="embla__viewport" ref={emblaRef}>
+      <div className="overflow-hidden " ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slide) => (
+          {slides?.map((slide) => (
             <div className="embla__slide" key={slide.id}>
               <div className="embla__parallax">
                 <div className="embla__parallax__layer flex flex-col !justify-start gap-y-5 text-nilor-white">
@@ -139,12 +143,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                           {slide.description}
                         </p>
                         
-                        <NilorButton text="More" className="!mt-10"/>
+                        <NilorButton onClick={() => router.push(slide.btnLink ? slide.btnLink : `/projects/${slide.title}`)} text="More" className="!mt-10"/>
                       </div>
                     )}
                 </div>
               </div>
             </div>
+          ))}
+          {tutorials && tutorials.map((tutorial, index) => (
+            <div className="embla__slide w-full" key={index} 
+            dangerouslySetInnerHTML={{ __html: tutorial }}></div>
           ))}
         </div>
       </div>

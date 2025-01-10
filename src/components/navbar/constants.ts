@@ -26,9 +26,9 @@ export const navbarItems = [
   //   name: 'Insights',
   //   link: '/insights',
   // },
-  {
-    name: 'About',
-    link: '/about',
-  },
+  // {
+  //   name: 'About',
+  //   link: '/about',
+  // },
 
 ]

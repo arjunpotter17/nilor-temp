@@ -36,13 +36,14 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
           className="w-full min-h-[calc(100vh-100px)] bg-cover flex items-center justify-center"
           style={{ backgroundImage: `url(${src})` }}
         >
-          <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-6 ~px-4/0">
+          <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] ~px-4/0">
+
             <p className="nilor-pre">{pre.toLocaleLowerCase()}</p>
             <p className="nilor-title md:max-w-[60%] font-nilor-semibold leading-tight">
               {title}
             </p>
             {titleText && (
-              <p className="nilor-hero-text font-nilor-light text-nilor-white w-[60%] text-justify whitespace-pre-wrap">
+              <p className="nilor-hero-text font-nilor-light text-nilor-white w-[60%] text-justify whitespace-pre-wrap mt-6">
                 {titleText.split("\n").map((line, index) => (
                   <span key={index}>
                     {line}
@@ -64,10 +65,13 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
             playsInline
             aria-hidden="true"
           />
+          
+           <div className="absolute h-[calc(100vh-100px)] inset-0 w-full bg-black bg-opacity-50 z-10"></div>
+          
           <div className="w-full min-h-[calc(100vh-100px)] bg-transparent flex items-center justify-center z-20">
-            <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10">
-              <p className="nilor-pre">{pre}</p>
-              <p className="nilor-title max-w-[60%] font-nilor-semibold">
+            <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] ~px-4/0">
+              <p className="nilor-pre">{pre.toLocaleLowerCase()}</p>
+              <p className="nilor-title w-full md:max-w-[60%] font-nilor-semibold leading-tight">
                 {title}
               </p>
             </div>
@@ -78,7 +82,7 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
       {text && (
         <div className="max-w-[1152px] flex justify-center items-center ~pt-16/32 ~px-4/0">
           <p className="nilor-hero-text font-nilor-regular text-nilor-white w-full  md:w-[85%] text-justify">
-            {text.toLocaleLowerCase()}
+            {text}
           </p>
         </div>
       )}

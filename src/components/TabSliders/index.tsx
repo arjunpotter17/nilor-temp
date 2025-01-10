@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import NilorButton from "../NilorButton";
-import PreTitle from "../PreTitle/Index";
+import PreTitle from "../PreTitle";
 
 type Tab = {
   tabName: string;

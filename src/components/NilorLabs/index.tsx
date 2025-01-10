@@ -1,5 +1,5 @@
 import NilorButton from "../NilorButton";
-import PreTitle from "../PreTitle/Index";
+import PreTitle from "../PreTitle";
 
 function NilorLabs() {
   return (

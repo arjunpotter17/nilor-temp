@@ -43,7 +43,7 @@ export const TimelineNode = ({ phase, isLast }: TimelineNodeProps) => {
 
       {/* Labels */}
       <div className={`mt-6 text-center transition-all duration-300 ${isActive ? 'opacity-0 scale-0' : ''}`}>
-        <h3 className="text-2xl font-bold text-gray-800">{phase.title}</h3>
+        <h3 className="text-2xl font-bold text-nilor-accent">{phase.title}</h3>
         <p className="text-sm text-gray-600 mt-1">{phase.subtitle}</p>
         <p className="text-sm text-gray-500 mt-2 max-w-xs">{phase.description}</p>
       </div>

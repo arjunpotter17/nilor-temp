@@ -18,6 +18,7 @@ export const AnimatedSection = ({ children, className }: { children: React.React
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
+      className={className}
     >
       {children}
     </Motion>

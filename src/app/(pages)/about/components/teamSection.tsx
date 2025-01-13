@@ -2,6 +2,8 @@
 import PreTitle from "@/components/PreTitle";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { AnimatedSection } from "@/components/AnimateComponent";
 
 interface TeamMember {
   name: string;
@@ -69,6 +71,9 @@ const TeamSection: React.FC = () => {
   };
 
   return (
+    // <AnimatedSection>
+
+
     <section className="py-24 max-w-[1152px]">
       <div className="max-w-7xl mx-auto">
         <PreTitle
@@ -77,7 +82,7 @@ const TeamSection: React.FC = () => {
           bgWhite={true}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-10 xl:px-0 mt-10">
           {teamMembers.map((member) => (
             <div
               key={member.name}
@@ -85,19 +90,13 @@ const TeamSection: React.FC = () => {
               onClick={() => handleCardClick(member.name)}
             >
               {/* Image Section */}
-              <div className="aspect-w-1 aspect-h-1">
-                <img
+              <div className="aspect-square relative">
+                <Image
                   src={member.image}
                   alt={member.name}
+                  fill
                   className="w-full h-full object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
                 />
-                {/* <div
-                  className="absolute inset-0 bg-gradient-to-br opacity-75"
-                  style={{
-                    backgroundColor: `hsl(${(index * 40) % 360}, 70%, 85%)`,
-                    mixBlendMode: "color",
-                  }}
-                /> */}
               </div>
 
               {/* Description Overlay */}
@@ -115,7 +114,7 @@ const TeamSection: React.FC = () => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-xl font-bold mb-2"
+                      className="text-lg xl:text-xl font-bold mb-2"
                     >
                       {member.name}
                     </motion.h4>
@@ -124,7 +123,7 @@ const TeamSection: React.FC = () => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-sm mb-4"
+                      className="text-xs xl:text-sm mb-4"
                     >
                       {member.role}
                     </motion.p>
@@ -133,7 +132,7 @@ const TeamSection: React.FC = () => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-sm"
+                      className="text-xs xl:text-sm"
                     >
                       {member.description}
                     </motion.p>
@@ -153,6 +152,7 @@ const TeamSection: React.FC = () => {
         </div>
       </div>
     </section>
+    // </AnimatedSection>
   );
 };
 

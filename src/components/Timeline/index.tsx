@@ -37,7 +37,7 @@ const steps: Step[] = [
 
 const TimeLine = () => {
   return (
-    <div className="bg-black text-white p-4 sm:p-8">
+    <div className="bg-black text-white py-4 sm:py-8">
       <div className="max-w-[1152px] mx-auto">
         {/* Desktop Layout */}
         <div className="hidden sm:flex items-start gap-4 lg:gap-8">

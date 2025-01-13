@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { ProjectImage } from './ProjectImage';
 import { useRouter } from 'next/navigation';
+import { AnimatedSection } from '@/components/AnimateComponent';
 
 interface ProjectCardProps {
   title: string;
@@ -16,8 +17,11 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const router = useRouter();
   return (
+    <AnimatedSection>
+
+
     <div 
-      className={`flex flex-col items-center w-full gap-8 py-3 px-8 transition-all duration-500 ${props.className}`}
+      className={`flex flex-col items-center w-full gap-8 py-3 px-4 md:px-10 xl:px-0 transition-all duration-500 ${props.className}`}
     >
       <ProjectImage {...props}/>
       
@@ -35,5 +39,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         </button>
       </div>
     </div>
+    </AnimatedSection>
   );
 }

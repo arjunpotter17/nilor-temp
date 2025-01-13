@@ -60,7 +60,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-[calc(100vh-100px)] bg-black relative ~px-4/0">
+    <div className="min-h-[calc(100vh-100px)] bg-black relative px-4 md:px-10 xl:px-0">
       {/* Background Image */}
       <AnimatePresence mode="wait">
         {!showCarousel && (
@@ -72,7 +72,7 @@ const ProjectDetails = () => {
             transition={{ duration: 0.5 }}
           >
             {" "}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 min-h-[calc(100vh-100px)]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentImageIndex}
@@ -103,7 +103,7 @@ const ProjectDetails = () => {
               className="group inline-flex items-center text-nilor-offwhite hover:text-white transition-colors"
             >
               <ChevronLeft className="h-5 w-5 mr-1 group-hover:text-nilor-accent" />
-              Back to Projects
+              Back
             </button>
             
             <button

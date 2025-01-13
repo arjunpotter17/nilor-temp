@@ -12,7 +12,7 @@ export default function About() {
   const scrollToForm = () => {
     setShowForm(true);
     setTimeout(() => {
-      const topOffset = 120; // Adjust for fixed header or padding
+      const topOffset = 320; // Adjust for fixed header or padding
       const element = formRef.current;
       if (element) {
         const topPosition =
@@ -33,6 +33,7 @@ export default function About() {
       <div className="bg-nilor-white w-full flex-col flex items-center justify-center gap-y-10">
       {/* <Mission /> */}
       <TeamSection />
+      
       <div className="flex flex-col w-full bg-nilor-offwhite items-center justify-center py-20">
         <div className="max-w-[1152px] text-nilor-black gap-y-5 flex flex-col px-4 md:px-0">
           <h1 className="nilor-title">Get in Touch</h1>
@@ -66,6 +67,14 @@ export default function About() {
           )}
         </div>
       </div>
+      <HeroBanner
+        type="image"
+        src="/contactus-bg.webp"
+        pre=""
+        title="Have a technical question?"
+        titleText={`Email: support@nilor.cool\nTelephone:\nUK +44 (0) 207 2349 841\nUS +1 (347) 934 9344 |\nHK +852 38928400`}
+
+      />
       <Footer/>
       </div>
     

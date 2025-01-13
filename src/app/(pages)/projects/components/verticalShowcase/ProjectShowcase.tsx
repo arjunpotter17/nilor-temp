@@ -4,7 +4,7 @@ import { allProjects } from '../../constants/projectDetails';
 
 export const ProjectShowcase: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <div className="max-w-[1152px] mx-auto py-20">
         <div className="space-y-1">
         {allProjects.map((project, index) => (

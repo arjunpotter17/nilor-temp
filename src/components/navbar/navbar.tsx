@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import NilorButton from "../NilorButton";
+import { GiHamburgerMenu } from "react-icons/gi";
 // import { XIcon, MenuIcon } from '@heroicons/react/outline'; // Optional: for hamburger icon and close icon
 
 const Navbar = () => {
@@ -19,10 +21,10 @@ const Navbar = () => {
 
   
   return (
-    <header className="bg-nilor-black sticky top-0 z-50 h-[72px] flex items-center justify-center min-w-full px-4 md:px-0">
+    <header className="bg-nilor-black sticky top-0 z-50 h-[72px] flex items-center justify-center min-w-full px-4 md:px-10 xl:px-0">
       <nav className="container mx-auto flex items-center justify-between w-full max-w-[1152px]">
         {/* Logo */}
-        <Link href="/" className="relative w-[48px] h-[48px]">
+        <Link href="/" className="relative w-[32px] h-[32px] md:w-[48px] md:h-[48px]">
           <Image src={"/nilor_new_logo.png"} alt="nilor logo" fill />
         </Link>
         {/* Desktop Navbar Items */}
@@ -64,7 +66,7 @@ const Navbar = () => {
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-nilor-offwhite text-xl">
-            {isOpen ? "✕" : "☰"} {/* X for close, ☰ for menu */}
+            {isOpen ? "" : <GiHamburgerMenu/>} {/* X for close, ☰ for menu */}
           </button>
         </div>
       </nav>
@@ -77,7 +79,7 @@ const Navbar = () => {
         onClick={toggleMenu}
       >
         <div
-          className={`fixed right-0 top-0 w-3/4 bg-nilor-black text-nilor-white h-full p-6 shadow-lg transform transition-transform duration-300 ${
+          className={`fixed right-0 top-0 w-full max-w-[500px] bg-nilor-black text-nilor-white h-full p-6 shadow-lg transform transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           onClick={(e) => e.stopPropagation()}
@@ -88,7 +90,7 @@ const Navbar = () => {
           >
             ✕
           </button>
-          <ul className="space-y-4 mt-12">
+          <ul className="mt-20 mx-auto flex flex-col items-center gap-y-8">
             {navbarItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -108,7 +110,7 @@ const Navbar = () => {
               </button>
             </li> */}
             <li>
-              <button
+              {/* <button
                 onClick={() => {
                   toggleMenu();
                   router.push("/contact");
@@ -116,9 +118,13 @@ const Navbar = () => {
                 className="w-full text-center py-2 bg-transparent border border-nilor-accent text-nilor-white rounded-lg mt-2"
               >
                 Contact Us
-              </button>
+              </button> */}
+              <NilorButton text="Contact Us" onClick={() => {
+                  toggleMenu();
+                  router.push("/about");
+                }}/>
             </li>
-            <li>
+            {/* <li>
               <button
                 onClick={() => {
                   toggleMenu();
@@ -128,7 +134,7 @@ const Navbar = () => {
               >
                 Book a Demo
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

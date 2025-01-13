@@ -1,8 +1,12 @@
+import { AnimatedSection } from "../AnimateComponent";
 import NilorButton from "../NilorButton";
 import PreTitle from "../PreTitle";
 
 function NilorLabs() {
   return (
+    <AnimatedSection>
+
+
     <div className="w-full flex flex-col justify-center items-center">
      <PreTitle pre="Nilor Labs" title="Always State-of-the-art"/>
       <video
@@ -15,8 +19,9 @@ function NilorLabs() {
         className="h-full w-full max-h-[800px]"
         disablePictureInPicture
       ></video>
-     <NilorButton text="View Services"/>
+     <NilorButton text="View Services" linkTo={'/services'}/>
     </div>
+    </AnimatedSection>
   );
 }
 

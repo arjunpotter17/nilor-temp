@@ -1,8 +1,11 @@
+import { AnimatedSection } from "../AnimateComponent";
 import PreTitle from "../PreTitle";
 
 export default function Film() {
   const src = "/solutions-visual-exp.png";
   return (
+    <AnimatedSection>
+
     <div className="w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center text-nilor-white gap-y-10">
      <PreTitle pre="Nilor in action" title="Next Level Visual Experiences"/>
       <div
@@ -11,7 +14,7 @@ export default function Film() {
     backgroundImage: `url(${src})`,
   }}
 >
-        <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10 ~px-4/0">
+        <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] gap-y-10 px-4 md:px-10 xl:px-0">
           <p className="nilor-title">
             Dynamic Worlds
           </p>
@@ -21,5 +24,7 @@ export default function Film() {
         </div>
       </div>
     </div>
+          
+    </AnimatedSection>
   );
 }

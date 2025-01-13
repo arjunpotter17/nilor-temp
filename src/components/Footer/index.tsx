@@ -1,29 +1,32 @@
+import Link from "next/link";
+import { AnimatedSection } from "../AnimateComponent";
+
 export default function Footer() {
   return (
-    <div className="w-full flex items-center justify-center bg-[#011111] py-10 ~px-4/0">
+    <AnimatedSection>
+    <div className="w-full flex items-center justify-center bg-[#011111] py-10 px-4 md:px-10 xl:px-0">
       <div className="max-w-[1152px] w-full space-y-20">
         <div className="flex justify-between">
-          <ul className="text-nilor-white gap-y-2 flex flex-col">
-            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
-              Contact
-            </li>
-            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
-              Careers
-            </li>
-            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
-              Tutorials
-            </li>
-            <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
-              About
-            </li>
-          </ul>
+        <ul className="text-nilor-white gap-y-2 flex flex-col">
+  <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
+    <Link href="/about">Contact</Link>
+  </li>
+  {/* <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
+    <Link href="/careers">Careers</Link>
+  </li> */}
+  <li className="hover:font-nilor-semibold hover:text-nilor-accent cursor-pointer transition-all duration-300 ease-in-out">
+    <Link href="/learn">Tutorials</Link>
+  </li>
+ 
+</ul>
+
           <div className="flex space-x-4 text-nilor-white">
             <a
-              href="https://facebook.com"
+              href="https://discord.com/channels/1171373496073457664"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-400"
-              aria-label="Facebook"
+              className="hover:text-nilor-accent"
+              aria-label="Discord"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,14 +34,14 @@ export default function Footer() {
                 viewBox="0 0 24 24"
                 className="w-6 h-6"
               >
-                <path d="M22.675 0h-21.35C.583 0 0 .583 0 1.3v21.4c0 .718.583 1.3 1.325 1.3H12V14.7H9.7v-3.3H12V9.1c0-2.3 1.4-3.5 3.4-3.5.975 0 1.8.072 2.1.104v2.425h-1.7c-1.337 0-1.6.64-1.6 1.575v2.1H18l-.3 3.3h-2.5v9.3h6.275c.742 0 1.325-.582 1.325-1.3V1.3c0-.718-.583-1.3-1.325-1.3z" />
+                <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.55.07.07 0 0 0-.076.035c-.211.37-.444.855-.608 1.237-1.865-.278-3.727-.278-5.578 0-.164-.392-.397-.867-.614-1.237a.072.072 0 0 0-.076-.035c-1.694.39-3.328.94-4.885 1.55a.065.065 0 0 0-.03.027C.533 9.157-.32 13.68.099 18.153a.081.081 0 0 0 .031.057 20.095 20.095 0 0 0 5.993 3.03.071.071 0 0 0 .078-.027 14.566 14.566 0 0 0 1.261-2.062.069.069 0 0 0-.041-.098 12.95 12.95 0 0 1-1.841-.878.07.07 0 0 1-.007-.118c.124-.092.248-.188.365-.28a.07.07 0 0 1 .071-.01c3.835 1.755 7.963 1.755 11.742 0a.07.07 0 0 1 .073.01c.117.092.241.188.365.28a.07.07 0 0 1-.006.118c-.588.37-1.21.668-1.842.878a.07.07 0 0 0-.04.099 13.16 13.16 0 0 0 1.261 2.061.071.071 0 0 0 .078.028 20.082 20.082 0 0 0 6.002-3.03.07.07 0 0 0 .03-.057c.503-5.063-.838-9.542-3.467-13.757a.063.063 0 0 0-.031-.028zM8.02 15.574c-1.155 0-2.104-1.064-2.104-2.375s.927-2.375 2.104-2.375c1.166 0 2.113 1.065 2.104 2.375 0 1.31-.927 2.375-2.104 2.375zm7.944 0c-1.155 0-2.104-1.064-2.104-2.375s.927-2.375 2.104-2.375c1.166 0 2.113 1.065 2.104 2.375 0 1.31-.927 2.375-2.104 2.375z" />
               </svg>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/nilorstudio"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-400"
+              className="hover:text-nilor-accent"
               aria-label="Twitter"
             >
               <svg
@@ -51,10 +54,10 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/nilor-corp"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-400"
+              className="hover:text-nilor-accent"
               aria-label="LinkedIn"
             >
               <svg
@@ -69,7 +72,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="text-nilor-white mt-5 flex items-center justify-center space-x-4 text-center text-xs">
+        {/* <p className="text-nilor-white mt-5 flex items-center justify-center space-x-4 text-center text-xs">
           <span className="group flex items-center space-x-1">
             <span className="text-nilor-white">•</span>
             <span className="hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -94,9 +97,9 @@ export default function Footer() {
               Support
             </span>
           </span>
-        </p>
-        
+        </p> */}
       </div>
     </div>
+    </AnimatedSection>
   );
 }

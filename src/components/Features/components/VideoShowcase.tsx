@@ -26,7 +26,7 @@ export function VideoShowcase({ inverted = false, videoUrl, title, points, image
   const videoOrder = inverted ? 'lg:order-1' : '';
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={contentOrder}>

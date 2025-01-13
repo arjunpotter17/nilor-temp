@@ -1,5 +1,6 @@
 import Image from "next/image";
-import NilorButton from "../NilorButton";
+import { AnimatedSection } from "../AnimateComponent";
+// import NilorButton from "../NilorButton";
 
 interface ExpDataType {
   pre: string;
@@ -18,7 +19,10 @@ export default function ImmersiveExp({
   reverse = false,
 }: ExpDataType) {
   return (
-    <div className="bg-nilor-secondary w-full px-4 md:px-0 py-32 flex justify-center items-center text-nilor-white">
+    <AnimatedSection>
+
+
+    <div className="bg-nilor-secondary w-full px-4 md:px-10 xl:px-0 py-20 md:py-32 flex justify-center items-center text-nilor-white">
       <div
         className={`w-full flex flex-col ${
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"
@@ -30,7 +34,7 @@ export default function ImmersiveExp({
             <h1 className="nilor-title leading-none">{title}</h1>
           </div>
           <p className="nilor-text">{para}</p>
-          <NilorButton text="Learn More"/>
+          {/* <NilorButton text="Learn More"/> */}
         </div>
         <div className="w-full lg:max-w-[40%] h-[300px] lg:h-[500px] relative perspective-800">
           <div
@@ -48,5 +52,6 @@ export default function ImmersiveExp({
         </div>
       </div>
     </div>
+    </AnimatedSection>
   );
 }

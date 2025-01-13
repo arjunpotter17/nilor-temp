@@ -6,38 +6,9 @@ import NilorLabs from "@/components/NilorLabs";
 import Projects from "@/components/Projects";
 import TabSwitch from "@/components/TabSliders";
 import { projects } from "@/components/Projects/constants";
+import { landingPageTabDetails } from "@/app/constants/tabDetails";
 
 export default function Home() {
-  const tabs = [
-    {
-      tabName: "Visualise",
-      title: "Best Hardware 1",
-      buttonText: "Learn More",
-      para: "This is a great hardware that we offer. It is obviously not as good as the others on the list. You should pick the one that is most expensive.",
-      imgSrc: "/hardware-placeholder.webp",
-    },
-    {
-      tabName: "Design",
-      title: "Best Hardware 2",
-      buttonText: "Learn More",
-      para: "This is a great hardware that we offer. It is obviously not as good as the others on the list. You should pick the one that is most expensive.",
-      imgSrc: "/hardware-placeholder.webp",
-    },
-    {
-      tabName: "Control",
-      title: "Best Hardware 3",
-      buttonText: "Learn More",
-      para: "This is a great hardware that we offer. It is obviously not as good as the others on the list. You should pick the one that is most expensive.",
-      imgSrc: "/hardware-placeholder.webp",
-    },
-    {
-      tabName: "Connect",
-      title: "Best Hardware 4",
-      buttonText: "Learn More",
-      para: "This is a great hardware that we offer. It is obviously not as good as the others on the list. You should pick the one that is most expensive.",
-      imgSrc: "/hardware-placeholder.webp",
-    },
-  ];
   return (
     <div className="flex flex-col w-full gap-y-[100px] md:gap-y-[200px]">
       <HeroBanner
@@ -55,12 +26,11 @@ export default function Home() {
       <Clients />
 
       <TabSwitch
-        tabIndication = {false}
+        tabIndication={false}
         title="Innovative tools. Exceptional content. Unmatched expertise."
         para="All-encompassing software. Fundamental hardware. Complete support and learning services. A fully integrated ecosystem for seamlessly delivering complex graphics in real-time to any surface."
-        tabs={tabs}
+        tabs={landingPageTabDetails}
       />
-
       <Features />
 
       <NilorLabs />

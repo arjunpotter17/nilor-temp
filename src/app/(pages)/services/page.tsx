@@ -21,8 +21,8 @@ Turning imagination into reality through powerful tools"
       <div className="flex flex-col">
         <ImmersiveExp
           pre="Technical Services"
-          title="Power to Create"
-          para="We provide the sophisticated infrastructure and tools that power immersive experiences. From hardware integration to AI-powered content generation, our technical solutions enable seamless creation and delivery of dynamic visual environments"
+          title="Sidekicks and Superheroes"
+          para="Whether you need us to own every stage of the pipeline, you want to work alongside us while we tackle specific elements, or you just need us to 'take care of' something, our team can handle it."
           imgSrc="/power_to_create.jpg"
           buttonText="Learn More"
         />

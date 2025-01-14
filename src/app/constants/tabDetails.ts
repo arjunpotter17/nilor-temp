@@ -1,5 +1,15 @@
 import { TabDetails } from "@/lib/types";
 
+export const landingPageTabConstants = {
+  para:"All-encompassing software. Fundamental hardware. Complete support and learning services. A fully integrated ecosystem for seamlessly delivering complex graphics in real-time to any surface.",
+  title:"Innovative tools. Exceptional content. Unmatched expertise."
+}
+
+export const productPageTabsConstants = {
+  pre: "We Deliver",
+  title: "Scalable and Versatile Products"
+}
+
 export const landingPageTabDetails: TabDetails[] = [
     {
       tabName: "Visualise",

@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className="container mx-auto flex items-center justify-between w-full max-w-[1152px]">
         {/* Logo */}
         <Link href="/" className="relative w-[32px] h-[32px] md:w-[48px] md:h-[48px]">
-          <Image src={"/nilor_new_logo.png"} alt="nilor logo" fill />
+          <Image src={"/logo/nilor_new_logo.png"} alt="nilor logo" fill />
         </Link>
         {/* Desktop Navbar Items */}
         <div className="hidden md:flex items-center justify-between w-fit gap-x-24">

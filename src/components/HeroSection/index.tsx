@@ -1,24 +1,6 @@
+import { HeroProps } from "@/lib/types";
 import { AnimatedSection } from "../AnimateComponent";
 
-interface HeroPropsBase {
-  text?: string;
-  src: string;
-  titleText?: string;
-}
-
-interface HeroPropsVideo extends HeroPropsBase {
-  type: "video";
-  pre?: never;
-  title?: never;
-}
-
-interface HeroPropsImage extends HeroPropsBase {
-  type: "image" | "bgVideo";
-  pre: string;
-  title: string;
-}
-
-type HeroProps = HeroPropsVideo | HeroPropsImage;
 
 function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
   return (

@@ -3,22 +3,23 @@ import HeroBanner from "@/components/HeroSection";
 import SingleProject from "@/components/SingleProject";
 import TabSwitch from "@/components/TabSliders";
 import { productSingleProject } from "@/app/constants/singleProjectDetails";
-import { productPageTabsDetails } from "@/app/constants/tabDetails";
+import { productPageTabsConstants, productPageTabsDetails } from "@/app/constants/tabDetails";
+import { productsHero } from "@/app/constants/heroSectionDetails";
 
 export default function Solutions() {
   return (
     <div className="flex flex-col w-full gap-y-[200px]">
       <HeroBanner
         type="image"
-        src="/product-hero.png"
-        pre="products"
-        title="An Orchestra of Instruments"
-        text={`Our platform reimagines ideation and asset development, giving creative teams the tools to explore, experiment, and refine their vision—together. Designed for both technical and non-technical collaborators, it transforms collective input into tangible, cohesive results, unlocking new possibilities for visual storytelling.`}
+        src={productsHero.src}
+        pre={productsHero.pre as string}
+        title={productsHero.title as string}
+        text={productsHero.text}
       />
 
       <TabSwitch
-        pre="we DELIVER"
-        title="Scalable and Versatile Products"
+        pre={productPageTabsConstants.pre}
+        title={productPageTabsConstants.title}
         tabs={productPageTabsDetails}
         tabIndication={false}
       />

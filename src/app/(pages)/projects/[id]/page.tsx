@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronDown, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { allProjects as projects } from "../constants/projectDetails";
+import { allProjects as projects } from "@/app/constants/indi_project_details";
 import { usePathname, useRouter } from "next/navigation";
 
 const ProjectDetails = () => {

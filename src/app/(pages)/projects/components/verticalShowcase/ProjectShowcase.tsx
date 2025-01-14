@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectCard } from './ProjectCard';
-import { allProjects } from '../../constants/projectDetails';
+import { allProjects } from '@/app/constants/indi_project_details';
 
 export const ProjectShowcase: React.FC = () => {
   return (

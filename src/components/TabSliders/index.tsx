@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import NilorButton from "../NilorButton";
+// import NilorButton from "../NilorButton";
 import PreTitle from "../PreTitle";
 import { AnimatedSection } from "../AnimateComponent";
 
@@ -96,7 +96,7 @@ export default function TabSwitch({
                   </p>
                 </div>
                 <p className="nilor-text-small">{currentTab.para}</p>
-                <NilorButton text={currentTab.buttonText} />
+                {/* <NilorButton text={currentTab.buttonText} /> */}
               </div>
 
               {/* Tab Image */}

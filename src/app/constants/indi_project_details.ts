@@ -1,8 +1,8 @@
 export const allProjects = [
-    {
-        id:1,
-        name: "Seeing echoes in the mind of the whale",
-        description: `
+  {
+    id: 1,
+    name: "Seeing echoes in the mind of the whale",
+    description: `
         Client
             Marshmallow Laser Feast & Natan Sinigaglia
 
@@ -18,14 +18,15 @@ export const allProjects = [
         Impact
             At DHub running from 10/10/2024 - 23/02/2025
             Video artwork is an 18-minute long 2-channel video installation with 16.2-channel audio.`,
-        images: [
-            "/projects/whale/1.webp",
-            "/projects/whale/2.webp",
-            "/projects/whale/3.webp",
-            "/projects/whale/4.webp",
-        ],
-        brief:"Extract reusable data from input videos to reconstruct an underwater world composed of many parts"
-    },
+    images: [
+      "/projects/whale/1.webp",
+      "/projects/whale/2.webp",
+      "/projects/whale/3.webp",
+      "/projects/whale/4.webp",
+    ],
+    brief:
+      "Extract reusable data from input videos to reconstruct an underwater world composed of many parts",
+  },
   {
     id: 4,
     name: "Faedra",
@@ -49,7 +50,7 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Faedra+2",
       "https://via.placeholder.com/600x400?text=Faedra+3",
     ],
-    brief: 'Set Visuals for F4edra at iii Points Festival Miami'
+    brief: "Set Visuals for F4edra at iii Points Festival Miami",
   },
   {
     id: 5,
@@ -74,7 +75,7 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Vivid+Zenon+2",
       "https://via.placeholder.com/600x400?text=Vivid+Zenon+3",
     ],
-    brief: 'Generative AI Social Media content'
+    brief: "Generative AI Social Media content",
   },
   {
     id: 6,
@@ -99,7 +100,7 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Haunted+Nilor+2",
       "https://via.placeholder.com/600x400?text=Haunted+Nilor+3",
     ],
-    brief:'Visuals for an immersive Halloween experience with specific themes'
+    brief: "Visuals for an immersive Halloween experience with specific themes",
   },
   {
     id: 7,
@@ -119,12 +120,12 @@ export const allProjects = [
 
         Impact  
             Both venues are located in the prestigious Dubai Mall and are popular one-of-a-kind venues with these artworks still being produced and in rotation.`,
-            images: [
+    images: [
       "https://via.placeholder.com/600x400?text=Zenon+and+Trove+1",
       "https://via.placeholder.com/600x400?text=Zenon+and+Trove+2",
       "https://via.placeholder.com/600x400?text=Zenon+and+Trove+3",
     ],
-    brief: ' Create content for a wide range of surfaces across 2 venues'
+    brief: " Create content for a wide range of surfaces across 2 venues",
   },
   {
     id: 8,
@@ -149,7 +150,7 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Nilor+x+FUC+2",
       "https://via.placeholder.com/600x400?text=Nilor+x+FUC+3",
     ],
-    brief:'Promo video for fashion label fackupclothes'
+    brief: "Promo video for fashion label fackupclothes",
   },
   {
     id: 9,
@@ -174,7 +175,7 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Nilor+x+Varial+2",
       "https://via.placeholder.com/600x400?text=Nilor+x+Varial+3",
     ],
-    brief:'Visuals for rave in Utrecht Skatepark'
+    brief: "Visuals for rave in Utrecht Skatepark",
   },
   {
     id: 10,
@@ -199,7 +200,7 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Zenon+Hermes+2",
       "https://via.placeholder.com/600x400?text=Zenon+Hermes+3",
     ],
-    brief:'Large format content and content creation tools.'
+    brief: "Large format content and content creation tools.",
   },
   {
     id: 11,
@@ -222,11 +223,12 @@ export const allProjects = [
             Groups of up to 30 people, with a new group every 12 minutes from 30 Jul - 1 Sep 2024.`,
     images: [
       "/projects/sweet_dreams/1.webp",
-"/projects/sweet_dreams/2.webp",
-"/projects/sweet_dreams/3.webp",
-"/projects/sweet_dreams/4.webp",
+      "/projects/sweet_dreams/2.webp",
+      "/projects/sweet_dreams/3.webp",
+      "/projects/sweet_dreams/4.webp",
     ],
-    brief:'2nd Unit Direction, Production and Execution of multimedia content across the whole production.'
+    brief:
+      "2nd Unit Direction, Production and Execution of multimedia content across the whole production.",
   },
   {
     id: 12,
@@ -252,6 +254,6 @@ export const allProjects = [
       "https://via.placeholder.com/600x400?text=Chicken+Party+2",
       "https://via.placeholder.com/600x400?text=Chicken+Party+3",
     ],
-    brief:'Audio-responsive visuals set for launch party'
+    brief: "Audio-responsive visuals set for launch party",
   },
 ];

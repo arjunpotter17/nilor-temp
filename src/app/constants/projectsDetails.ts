@@ -1,14 +1,14 @@
 export const landingPageProjects = {
   pre: "Our Work",
-  title: "Visual Masterpieces",
+  title: "Realms and Realities",
 };
 
 export const servicesPageProjectTexts = {
   pre: "approach",
-  title: "Crafted with Vision, Delivered with Precision",
+  title: "Loaded with Vision, Fired with Precision",
 };
 
 export const learnPageYoutubeTexts = {
   pre: "learn",
-  title: "Effortless Mastery",
+  title: "Wield the Staff",
 };

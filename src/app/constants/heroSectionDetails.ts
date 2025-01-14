@@ -1,7 +1,7 @@
 import { HeroProps } from "@/lib/types";
 
 export const landingHero: HeroProps = {
-  text: "nilor transforms spaces through dynamic canvases, creating immersive visual experiences across the world's most ambitious display installations. Our work lives at the intersection of artistic vision and technological innovation, pushing the boundaries of what's possible in large-scale digital environments. We harness cutting-edge AI and real-time rendering to bring previously impossible creative visions to life.",
+  text: "nilor conjures immersive worlds through dynamic canvases, fusing artistic vision and technological innovation to transform spaces into other worlds. Harnessing AI, real-time rendering, and more traditional techniques, we summon visions once thought impossible.",
   type: "video",
   src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`,
 };
@@ -10,16 +10,16 @@ export const solutionHero: HeroProps = {
   type: "image",
   src: "/solutions-hero.png",
   pre: "SOLUTIONS",
-  title: "Nilor empowers immersive creation",
-  text: `We empower people to collaborate and harmoniously bring bold ideas to life - without worrying about the tech. Our tools turn complex systems into intuitive workflows, so teams can focus on creating refined, real-time experiences together. `,
+  title: "nilor empowers immersive creation",
+  text: `We help teams craft bold ideas together—free from technical barriers. Our tools turn complex systems into intuitive workflows, so teams can focus on creating refined, real-time experiences together. `,
 };
 
 export const productsHero: HeroProps = {
   type: "image",
   src: "/product-hero.png",
   pre: "products",
-  title: "An Orchestra of Instruments",
-  text: `Our platform reimagines ideation and asset development, giving creative teams the tools to explore, experiment, and refine their vision—together. Designed for both technical and non-technical collaborators, it transforms collective input into tangible, cohesive results, unlocking new possibilities for visual storytelling.`,
+  title: "An orchestra of instruments",
+  text: `We reimagine ideation and asset development, giving teams the tools to explore, experiment, and refine their vision—together. Designed for both technical and non-technical collaborators, it transforms collective input into tangible, cohesive results, unlocking new realms for storytelling.`,
 };
 
 export const servicesHero: HeroProps = {
@@ -35,31 +35,33 @@ Turning imagination into reality through powerful tools`,
 export const projectsHero: HeroProps = {
   type: "image",
   pre: "PROJECTS",
-  title: "World Class Projects. Throughout the World.",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  title: "World class projects, worldwide",
+  text: "nilor has been trusted by some of the world's most ambitious venues and clients to deliver a rich variety of visual experiences. With extensive experience in a wide range of industries, nilor have been busy creating magic across the globe.",
   src: "/projects-hero.png",
 };
 
 export const learnHero: HeroProps = {
   type: "bgVideo",
   src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL_2}barbie.mp4`,
-  pre: "LEARN",
-  title: "Master the Art of Immersive Creation",
-  text: `We empower you to harness the full potential of our platform through comprehensive learning resources. From AI-powered content generation to synchronized display management, our expert-led tutorials guide you through every aspect of creating transformative visual experiences. Learn at your own pace with tutorials crafted by the same artists and technologists who build our tools.`,
+  pre: "learn",
+  title: "Carve your own path of discovery",
+  text: `Our platform is the perfect entry point into unleashing the power of visually investigating your ideas. Whether you're a seasoned sensei or a curious kook, our tutorials will guide you through the process of exploration, creation, and collaboration, so you can inject life into that thing you've been thinking about.`,
 };
 
 export const aboutHero: HeroProps = {
   type: "bgVideo",
   src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`,
   pre: "ABOUT",
-  title: "Our Mission",
-  text: "We are dedicated to transforming physical spaces through the power of synchronized visual art. Our integrated platform unites visionaries, artists, and venues in the creation of immersive environments that push the boundaries of what's possible. By seamlessly blending technological innovation with artistic vision, we enable the creation of experiences that inspire connection and wonder.",
+  title: "Our Agenda",
+  text: `We want more stories to be told, more worlds to be explored, and more experiences to be shared. We believe that the best way to achieve this is to empower creators with the tools they need to bring their ideas to life. 
+  
+  Our mission is to provide the world with the tools to create, collaborate, and share their stories, as well as leading the way by doing those things ourselves. By building the things we need to do our work, we hope to build things that also help others look into the depths, over the horizon, or right in front of them.`,
 };
 
 export const aboutContactSection: HeroProps = {
   type: "image",
   src: "/contactus-bg.webp",
   pre: "",
-  title: "Have a technical question?",
-  titleText: `Email: support@nilor.cool\nTelephone:\nUK +44 (0) 207 2349 841\nUS +1 (347) 934 9344 |\nHK +852 38928400`,
+  title: "Any questions?",
+  titleText: `Use the form above, or email hello@nilor.cool`,
 };

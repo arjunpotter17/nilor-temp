@@ -10,5 +10,5 @@ export const servicesPageProjectTexts = {
 
 export const learnPageYoutubeTexts = {
   pre: "learn",
-  title: "Wield the Staff",
+  title: "Begin your journey",
 };

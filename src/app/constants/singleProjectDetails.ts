@@ -6,7 +6,7 @@ export const solutionSingleProject: Project = {
   title: "Sweet Dreams",
   pre: "Aviva studios, Manchester",
   description:
-    "2nd Unit Direction, Production and Execution of multimedia content across the whole production.",
+    "Creative Direction and creation of content including images, videos, animation, installations, and even a stained glass window, across a huge immersive cinema show.",
   buttonText: "See AI in Action",
   url: "/sweet-dreams.jpg",
   fullText:
@@ -19,7 +19,7 @@ export const productSingleProject: Project = {
   title: "seeing echoes in the mind of the whale",
   pre: "disseny hub, barcelona",
   description:
-    "Extract reusable data from input videos to reconstruct an underwater world composed of many parts",
+    "Reconstructing the underwater world of a whale by dissecting a collection of inputs into many parts ready for reconstituion.",
   buttonText: "Explore",
   url: "/disseny.webp",
   fullText:

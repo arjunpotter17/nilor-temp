@@ -26,7 +26,7 @@ export default function Features() {
   return (
     <AnimatedSection>
       <div className="w-full bg-nilor-secondary flex flex-col items-center py-10 gap-y-10">
-        <PreTitle pre="featured" title="Creativity-first tools" />
+        <PreTitle pre="featured" title="Tools we can't put down" />
 
         <div className="max-w-[1152px] px-4 md:px-10 xl:px-0">
           <VideoShowcase {...feature1} />

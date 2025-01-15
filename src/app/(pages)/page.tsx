@@ -32,7 +32,7 @@ export default function Home() {
 
       <TabSwitch
         tabIndication={false}
-        title={landingPageTabConstants.title}
+        title={""}
         para={landingPageTabConstants.para}
         tabs={landingPageTabDetails}
       />

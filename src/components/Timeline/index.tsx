@@ -12,25 +12,25 @@ const steps: Step[] = [
   {
     title: "Ideas",
     description: "brainstorming",
-    details: "Rapid ideation within a creative team",
+    details: "Rapid ideation within a team",
     color: "#FFE4C4",
   },
   {
     title: "Iterations",
     description: "pre-production",
-    details: "Pre-visualization and storyboarding in 2D and 3D",
+    details: "Pre-visualization, storyboarding, toolmaking across 2D/3D",
     color: "#FFFF99",
   },
   {
     title: "Production Ready",
     description: "asset creation",
-    details: "Development tools and infrastructure to turn imagination into reality",
+    details: "Refining imagination into reality and final assets",
     color: "#98FB98",
   },
   {
     title: "Playback",
-    description: "visual velocity",
-    details: "Our suite of tools transforms creative concepts into production-ready synchronized displays",
+    description: "unleashing",
+    details: "From assets to audiences, across all manner of canvases",
     color: "#ADD8E6",
   },
 ];

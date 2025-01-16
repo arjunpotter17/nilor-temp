@@ -16,21 +16,21 @@ export const landingPageTabDetails: TabDetails[] = [
     title: "Worldbuilders",
     buttonText: "Learn More",
     para: "nilor takes pride in being able to offer end-to-end solutions. Whether you want people to cross over into another realm, or have your stories come to them in familiar spaces, nilor's team have years of experience in summoning worlds from mere pixels.",
-    imgSrc: "/hardware-placeholder.webp",
+    imgSrc: "/worldbuilders.png",
   },
   {
     tabName: "products",
     title: "Toolmakers",
     buttonText: "Learn More",
     para: "nilor knows bleeding-edge, but it also knows robust. We love making instruments that help uncover connections between things. We make and use whatever is right for the job, promiscuously and without loyalties; we're about making things that are as exciting to use as the results they produce.",
-    imgSrc: "/hardware-placeholder.webp",
+    imgSrc: "/toolmakers.png",
   },
   {
     tabName: "services",
     title: "Shapeshifters",
     buttonText: "Learn More",
     para: "nilor is a team of transdisciplinary humans who offer everything from creative direction to technical development. We can help you with everything from the initial concept to the final execution, from a little piece to the whole pie.",
-    imgSrc: "/hardware-placeholder.webp",
+    imgSrc: "/shapeshifters.png",
   },
 ];
 

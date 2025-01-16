@@ -52,7 +52,7 @@ const TimeLine = () => {
                     }`}
                     style={{ backgroundColor: step.color }}
                   ></div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-pink-500 mt-4 mb-2 text-nowrap">
+                  <h2 className="text-xl sm:text-2xl font-bold text-nilor-accent mt-4 mb-2 text-nowrap">
                     {step.title}
                   </h2>
                   <p className="text-gray-400 mb-4 text-sm sm:text-base text-nowrap font-nilor-light">
@@ -87,7 +87,7 @@ const TimeLine = () => {
                     }`}
                     style={{ backgroundColor: step.color }}
                   ></div>
-                  <h2 className="text-xl font-bold text-pink-500 mt-4 mb-2">
+                  <h2 className="text-xl font-bold text-nilor-accent mt-4 mb-2">
                     {step.title}
                   </h2>
                   <p className="text-gray-400 mb-1 text-sm">

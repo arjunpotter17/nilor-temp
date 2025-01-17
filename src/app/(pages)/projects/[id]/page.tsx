@@ -105,16 +105,17 @@ const ProjectDetails = () => {
               <ChevronLeft className="h-5 w-5 mr-1 group-hover:text-nilor-accent" />
               Back
             </button>
-            
+
             <button
               onClick={toggleView}
-              className="text-white/80 group transition-colors w-fit h-fit"
+              className="text-white/80 group transition-colors w-fit h-fit flex items-center gap-x-2"
             >
-                <motion.div
-          animate={{ rotate: showCarousel ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ChevronDown className="h-6 w-6 group-hover:text-nilor-accent" />
+              Media
+              <motion.div
+                animate={{ rotate: showCarousel ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChevronDown className="h-6 w-6 group-hover:text-nilor-accent" />
               </motion.div>
             </button>
           </div>

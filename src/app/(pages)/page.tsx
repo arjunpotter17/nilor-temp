@@ -31,11 +31,13 @@ export default function Home() {
       <Clients />
 
       <TabSwitch
-        tabIndication={false}
-        title={""}
+        pre=" "
+        title={landingPageTabConstants.title}
         para={landingPageTabConstants.para}
         tabs={landingPageTabDetails}
+        tabIndication={false}
       />
+
       <Features />
 
       <NilorLabs />

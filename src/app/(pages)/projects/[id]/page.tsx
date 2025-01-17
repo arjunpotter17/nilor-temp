@@ -11,7 +11,9 @@ const ProjectDetails = () => {
   const projectName = decodeURIComponent(
     params.split("/")[params.split("/").length - 1]
   );
-  const project = projects.find((p) => p.name.toLocaleLowerCase() === projectName.toLocaleLowerCase());
+  const project = projects.find(
+    (p) => p.name.toLocaleLowerCase() === projectName.toLocaleLowerCase()
+  );
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedThumbnailIndex, setSelectedThumbnailIndex] = useState(0);
   const [showCarousel, setShowCarousel] = useState(false);
@@ -90,7 +92,7 @@ const ProjectDetails = () => {
         )}
       </AnimatePresence>
 
-        {/*Transparent layer*/}
+      {/*Transparent layer*/}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/90 z-10" />
 
       {/* Content Wrapper */}
@@ -137,9 +139,18 @@ const ProjectDetails = () => {
                   <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                     {project.name}
                   </h1>
-                  <p className="text-white/90 text-lg md:text-xl max-w-3xl whitespace-pre-line">
-                    {project.description}
-                  </p>
+                  <div className="space-y-6">
+                    {project.description.map((section, index) => (
+                      <div key={index}>
+                        <h3 className="text-sm text-nilor-accent lowercase mb-2">
+                          {section.subtitle}
+                        </h3>
+                        <p className="text-white/80 text-lg max-w-2xl">
+                          {section.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

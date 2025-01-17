@@ -210,7 +210,7 @@ export const allProjects = [
             Marshmallow Laser Feast with BFI
 
         Brief  
-            2nd Unit Direction, Production and Execution of multimedia content across the whole production.
+            Creative Direction, Production and Execution of multimedia content across the whole production.
 
         Challenge  
             Multi-room large scale immersive cinema experience at Aviva Studios, Factory International, Manchester. 
@@ -250,9 +250,10 @@ export const allProjects = [
             Single day invitational event for opening of the show with special guests
         `,
     images: [
-      "https://via.placeholder.com/600x400?text=Chicken+Party+1",
-      "https://via.placeholder.com/600x400?text=Chicken+Party+2",
-      "https://via.placeholder.com/600x400?text=Chicken+Party+3",
+      "/projects/chicken_party/party-02.png",
+      "/projects/chicken_party/party-01.png",
+      "/projects/chicken_party/party-03.png",
+      "/projects/chicken_party/party-04.png",
     ],
     brief: "Audio-responsive visuals set for launch party",
   },

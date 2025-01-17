@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Project 1",
-    title: "seeing echoes in the mind of the whale",
+    title: "Seeing echoes in the mind of the whale",
     pre: "disseny hub, barcelona",
     description:
       "Extraction of reusable data from input videos to reconstruct an underwater world composed of many parts",
@@ -38,13 +38,13 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "Project 3",
-    title: "Zenon",
+    title: "Hermès",
     pre: "dubai mall, dubai",
     description:
       "Giant canvas content creation and toolmaking for updating visuals in a popular fine dining venue.",
     buttonText: "Visualize Data",
-    url: "/zenon.png",
-    btnLink: "/projects/zenon%20and%20trove",
+    url: "/projects/hermes/hermes-02.png",
+    btnLink: "/projects/Zenon%20x%20Hermès",
     fullText:
       "Our interactive data visualization platform transforms complex datasets into intuitive, engaging visual stories, making data accessible to everyone.",
   },

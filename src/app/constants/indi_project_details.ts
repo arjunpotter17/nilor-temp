@@ -44,7 +44,7 @@ export const allProjects = [
       },
       {
         subtitle: "Brief",
-        text: "Set Visuals for F4edra at iii Points Festival Miami",
+        text: "Set Visuals for F4EDRA at iii Points Festival Miami",
       },
       {
         subtitle: "Challenge",
@@ -65,11 +65,11 @@ export const allProjects = [
       "/projects/faedra/faedra-03.png",
       "/projects/faedra/faedra-04.png",
     ],
-    brief: "Set Visuals for F4edra at iii Points Festival Miami",
+    brief: "Set Visuals for F4EDRA at iii Points Festival Miami",
   },
   {
     id: 5,
-    name: "Vivid Zenon Emirates",
+    name: "Emirates x Vivid x Zenon",
     description: [
       {
         subtitle: "Client",
@@ -102,7 +102,7 @@ export const allProjects = [
   },
   {
     id: 6,
-    name: "Haunted Nilor",
+    name: "Nightmare at Hocus Pocus",
     description: [
       {
         subtitle: "Client",
@@ -133,7 +133,8 @@ export const allProjects = [
       "/projects/nightmare/nightmare-05.png",
       "/projects/nightmare/nightmare-06.png",
     ],
-    brief: "Visuals for an immersive Halloween experience with specific themes",
+    brief:
+      "Visuals for an immersive Halloween experience with specific horror themes",
   },
   {
     id: 7,
@@ -161,15 +162,18 @@ export const allProjects = [
       },
     ],
     images: [
-      "https://via.placeholder.com/600x400?text=Zenon+and+Trove+1",
-      "https://via.placeholder.com/600x400?text=Zenon+and+Trove+2",
-      "https://via.placeholder.com/600x400?text=Zenon+and+Trove+3",
+      "/projects/zenon_trove/trove-01.png",
+      "/projects/zenon_trove/trove-02.png",
+      "/projects/zenon_trove/zenon-01.png",
+      "/projects/zenon_trove/zenon-02.png",
+      "/projects/zenon_trove/zenon-03.png",
     ],
-    brief: " Create content for a wide range of surfaces across 2 venues",
+    brief:
+      " Create content for a wide range of surfaces across 2 venues in Dubai Mall",
   },
   {
     id: 8,
-    name: "Nilor x FUC",
+    name: "FUC Jeans",
     description: [
       {
         subtitle: "Client",
@@ -193,9 +197,9 @@ export const allProjects = [
       },
     ],
     images: [
-      "https://via.placeholder.com/600x400?text=Nilor+x+FUC+1",
-      "https://via.placeholder.com/600x400?text=Nilor+x+FUC+2",
-      "https://via.placeholder.com/600x400?text=Nilor+x+FUC+3",
+      "/projects/fuc/fuc-01.png",
+      "/projects/fuc/fuc-02.png",
+      "/projects/fuc/fuc-03.png",
     ],
     brief: "Promo video for fashion label fackupclothes",
   },
@@ -225,15 +229,14 @@ export const allProjects = [
       },
     ],
     images: [
-      "https://via.placeholder.com/600x400?text=Nilor+x+Varial+1",
-      "https://via.placeholder.com/600x400?text=Nilor+x+Varial+2",
-      "https://via.placeholder.com/600x400?text=Nilor+x+Varial+3",
+      "/projects/varial/varial-02.gif",
+      "/projects/varial/varial-01.gif",
     ],
     brief: "Visuals for rave in Utrecht Skatepark",
   },
   {
     id: 10,
-    name: "Zenon Hermes",
+    name: "Zenon x Hermès",
     description: [
       {
         subtitle: "Client",
@@ -249,7 +252,7 @@ export const allProjects = [
       },
       {
         subtitle: "Solution",
-        text: "nilor produced high quality content inspired by the Hermes tableware and decor, and also delivered the systems and tooling used to create the artwork to Vivid Studios to enable them to produce more work for the venue in future",
+        text: "nilor produced high quality content inspired by the Hermès tableware and decor, and also delivered the systems and tooling used to create the artwork to Vivid Studios to enable them to produce more work for the venue in future",
       },
       {
         subtitle: "Impact",
@@ -257,9 +260,8 @@ export const allProjects = [
       },
     ],
     images: [
-      "https://via.placeholder.com/600x400?text=Zenon+Hermes+1",
-      "https://via.placeholder.com/600x400?text=Zenon+Hermes+2",
-      "https://via.placeholder.com/600x400?text=Zenon+Hermes+3",
+      "/projects/hermes/hermes-02.png",
+      "/projects/hermes/hermes-01.png",
     ],
     brief: "Large format content and content creation tools.",
   },
@@ -295,7 +297,7 @@ export const allProjects = [
       "/projects/sweet_dreams/4.webp",
     ],
     brief:
-      "2nd Unit Direction, Production and Execution of multimedia content across the whole production.",
+      "Creative Direction, Production and Execution of multimedia content across the whole production.",
   },
   {
     id: 12,
@@ -307,7 +309,7 @@ export const allProjects = [
       },
       {
         subtitle: "Brief",
-        text: "Audio-responsive visuals set for launch party",
+        text: "Audio-responsive, audience-controlled visuals set for launch party",
       },
       {
         subtitle: "Challenge",
@@ -328,6 +330,6 @@ export const allProjects = [
       "/projects/chicken_party/party-03.png",
       "/projects/chicken_party/party-04.png",
     ],
-    brief: "Audio-responsive visuals set for launch party",
+    brief: "Audio-responsive, audience-controlled visuals set for launch party",
   },
 ];

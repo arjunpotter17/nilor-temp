@@ -1,7 +1,6 @@
 import { HeroProps } from "@/lib/types";
 import { AnimatedSection } from "../AnimateComponent";
 
-
 function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
   return (
     <AnimatedSection className="!min-w-full">
@@ -22,7 +21,9 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
             style={{ backgroundImage: `url(${src})` }}
           >
             <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] px-4 md:px-10 xl:px-0">
-              <p className="nilor-pre">{pre.toLocaleLowerCase()}</p>
+              <p className="nilor-pre text-nilor-accent">
+                {pre.toLocaleLowerCase()}
+              </p>
               <p className="nilor-title md:max-w-[60%] font-nilor-semibold leading-tight">
                 {title}
               </p>
@@ -54,7 +55,9 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
 
             <div className="w-full min-h-[calc(100vh-100px)] bg-transparent flex items-center justify-center z-20">
               <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] px-4 md:px-10 xl:px-0">
-                <p className="nilor-pre">{pre.toLocaleLowerCase()}</p>
+                <p className="nilor-pre text-nilor-accent">
+                  {pre.toLocaleLowerCase()}
+                </p>
                 <p className="nilor-title w-full md:max-w-[60%] font-nilor-semibold leading-tight">
                   {title}
                 </p>
@@ -65,7 +68,7 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
 
         {text && (
           <div className="max-w-[1152px] flex justify-center items-center ~pt-16/32 ~px-4/0">
-            <p className="nilor-hero-text font-nilor-regular text-nilor-white w-full  md:w-[85%] text-justify">
+            <p className="nilor-hero-text font-nilor-regular text-nilor-white w-full  md:w-[80%] text-justify">
               {text}
             </p>
           </div>

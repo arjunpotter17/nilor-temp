@@ -4,7 +4,7 @@ export const solutionSingleProject: Project = {
   id: 2,
   name: "Project 2",
   title: "Sweet Dreams",
-  pre: "Aviva studios, Manchester",
+  pre: "aviva studios, manchester",
   description:
     "Creative Direction and creation of content including images, videos, animation, installations, and even a stained glass window, across a huge immersive cinema show.",
   buttonText: "See AI in Action",
@@ -16,7 +16,7 @@ export const solutionSingleProject: Project = {
 export const productSingleProject: Project = {
   id: 1,
   name: "Project 1",
-  title: "seeing echoes in the mind of the whale",
+  title: "Seeing echoes in the mind of the whale",
   pre: "disseny hub, barcelona",
   description:
     "Reconstructing the underwater world of a whale by dissecting a collection of inputs into many parts ready for reconstituion.",

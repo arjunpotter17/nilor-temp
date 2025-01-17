@@ -16,7 +16,7 @@ export const solutionHero: HeroProps = {
 
 export const productsHero: HeroProps = {
   type: "image",
-  src: "/product-hero.png",
+  src: "/nilor-cool-title-dark.png",
   pre: "products",
   title: "An orchestra of instruments",
   text: `We reimagine ideation and asset development, giving teams the tools to explore, experiment, and refine their vision—together. Designed for both technical and non-technical collaborators, it transforms collective input into tangible, cohesive results, unlocking new realms for storytelling.`,

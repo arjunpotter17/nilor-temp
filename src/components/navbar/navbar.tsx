@@ -19,13 +19,19 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  
   return (
     <header className="bg-nilor-black sticky top-0 z-50 h-[72px] flex items-center justify-center min-w-full px-4 md:px-10 xl:px-0">
       <nav className="container mx-auto flex items-center justify-between w-full max-w-[1152px]">
         {/* Logo */}
-        <Link href="/" className="relative w-[32px] h-[32px] md:w-[48px] md:h-[48px]">
-          <Image src={"/logo/nilor_new_logo.png"} alt="nilor logo" fill />
+        <Link
+          href="/"
+          className="relative w-[32px] h-[32px] md:w-[48px] md:h-[48px]"
+        >
+          <Image
+            src={"/logo/logotype_square-clear.png"}
+            alt="nilor logo"
+            fill
+          />
         </Link>
         {/* Desktop Navbar Items */}
         <div className="hidden md:flex items-center justify-between w-fit gap-x-24">
@@ -34,7 +40,9 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 className={`text-nilor-offwhite text-sm hover:text-nilor-accent hover:transform hover:scale-105 transition-all duration-300 ${
-                  pathname.toLocaleLowerCase() === item.link ? "!text-nilor-accent font-bold" : ""
+                  pathname.toLocaleLowerCase() === item.link
+                    ? "!text-nilor-accent font-bold"
+                    : ""
                 }`}
                 href={item.link}
               >
@@ -66,7 +74,7 @@ const Navbar = () => {
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-nilor-offwhite text-xl">
-            {isOpen ? "" : <GiHamburgerMenu/>} {/* X for close, ☰ for menu */}
+            {isOpen ? "" : <GiHamburgerMenu />} {/* X for close, ☰ for menu */}
           </button>
         </div>
       </nav>
@@ -96,7 +104,9 @@ const Navbar = () => {
                 <Link
                   href={item.link}
                   className={`text-lg block hover:text-nilor-accent ${
-                    pathname.toLocaleLowerCase() === item.link ? "text-nilor-accent font-bold" : ""
+                    pathname.toLocaleLowerCase() === item.link
+                      ? "text-nilor-accent font-bold"
+                      : ""
                   }`}
                   onClick={toggleMenu}
                 >
@@ -119,10 +129,13 @@ const Navbar = () => {
               >
                 Contact Us
               </button> */}
-              <NilorButton text="Contact Us" onClick={() => {
+              <NilorButton
+                text="Contact Us"
+                onClick={() => {
                   toggleMenu();
                   router.push("/about");
-                }}/>
+                }}
+              />
             </li>
             {/* <li>
               <button

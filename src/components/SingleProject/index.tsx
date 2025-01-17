@@ -24,7 +24,7 @@ export default function SingleProject({
     <AnimatedSection>
       <div className="flex justify-center">
         <div className="flex flex-col items-center w-full max-w-[1152px] gap-y-10">
-          <PreTitle pre={pre} title={title} />
+          <PreTitle pre="featured project" title={title} />
           <div className="relative h-[20rem] w-full md:h-[30rem] md:w-[95%] mx-4 md:mx-0">
             <Image src={imageUrl} fill alt="project image" objectFit="cover " />
           </div>

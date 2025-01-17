@@ -1,7 +1,9 @@
 import { TabDetails } from "@/lib/types";
+import { title } from "process";
 
 export const landingPageTabConstants = {
   pre: "we offer",
+  title: "Actually extraordinary",
   para: "Worldbuilding solutions. Wilderness exploration instruments. Idea unleashing services.",
 };
 

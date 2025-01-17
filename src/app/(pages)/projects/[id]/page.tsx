@@ -142,7 +142,7 @@ const ProjectDetails = () => {
                   <div className="space-y-6">
                     {project.description.map((section, index) => (
                       <div key={index}>
-                        <h3 className="text-sm text-nilor-accent lowercase mb-2">
+                        <h3 className="text-sm text-nilor-accent lowercase">
                           {section.subtitle}
                         </h3>
                         <p className="text-white/80 text-lg max-w-2xl">

@@ -8,7 +8,7 @@ export const ImmersiveExpData = {
 
 export const LiveEventsData = {
   pre: "live events",
-  title: "Reality cubed",
+  title: "Beyond screens",
   para: "From intimate dining rooms to grand halls, our synchronized systems shape environments that captivate audiences and adapt seamlessly to their surroundings.",
   buttonText: "Learn More",
   imgSrc: "/reality-cubed.jpg",

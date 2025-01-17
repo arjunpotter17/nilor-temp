@@ -22,7 +22,7 @@ export const landingPageTabDetails: TabDetails[] = [
     tabName: "products",
     title: "Toolmakers",
     buttonText: "Learn More",
-    para: "nilor knows bleeding-edge, but it also knows robust. We love making instruments that help uncover connections between things. We make and use whatever is right for the job, promiscuously and without loyalties; we're about making things that are as exciting to use as the results they produce.",
+    para: "nilor knows bleeding-edge. nilor also knows robust. We love making instruments that help uncover connections between things and use whatever is right for the task. We're about making things that are as exciting to use as the results they produce.",
     imgSrc: "/toolmakers.png",
   },
   {

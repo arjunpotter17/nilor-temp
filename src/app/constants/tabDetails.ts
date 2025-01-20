@@ -1,5 +1,4 @@
 import { TabDetails } from "@/lib/types";
-import { title } from "process";
 
 export const landingPageTabConstants = {
   pre: "we offer",

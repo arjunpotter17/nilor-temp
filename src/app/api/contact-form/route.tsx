@@ -9,10 +9,10 @@ export async function POST(req: NextRequest) {
     const { name, email, phone, company, country, industry, comments } = data;
 
     // Make a request to the Google Apps Script Web App URL
-    const response = await fetch('https://script.google.com/macros/s/AKfycbxfwnrJ86FKDpEAWz-Afzx63-F9JqFSgnnGtcNPUiDMPVgWv7jghOc3KR6d31mhq7b-/exec', {
+    const response = await fetch(process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL as string, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', // Set the content type to JSON
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         name,

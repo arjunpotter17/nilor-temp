@@ -27,13 +27,6 @@ const teamMembers: TeamMember[] = [
       "Senior Creative and Programmer with a background in Architecture, Spatial Design & Education. Previously at Marshmallow Laser Feast full time, and his other work has been internationally exhibited, from South Korea to Venice to London, and he has given talks at international symposia such as Ars Electronica. During his time as an educator, Stephen introduced and taught a new Pre-U qualification called Interdisciplinary Design which prepared students for a future in applied arts practices, at a prestigious North London school.",
   },
   {
-    name: "Matt Klisz",
-    role: "Lead Engineer",
-    image: "/team/matt.jpg",
-    description:
-      "A front-end focused full-stack engineer with experience bringing multiple greenfield applications to market as a team & project leader, and developer. A passion for working closely with designers turned into front-end leadership at Athlinks, new app development for AUTOPAY, a design team position at VF guiding engineering on Vans and The North Face projects, and new app development at Hotel Engine. Now, UX development at nilor.",
-  },
-  {
     name: "Sebastian Monroy",
     role: "Creative Systems Software Engineer and Artist",
     image: "/team/seb.png",
@@ -60,6 +53,13 @@ const teamMembers: TeamMember[] = [
     image: "/team/james.jpg",
     description: "Tech entrepeneur & Investor.",
   },
+  {
+    name: "Eleanor (Nell) Whitley",
+    role: "Board",
+    image: "/team/nell.jpg",
+    description:
+      "Representing Marshmallow Laser Feast (MLF). MLF are an industry leading experiential artist collective who believe in the power of stories to tickle senses and shift perceptions.",
+  },
 ];
 
 const TeamSection: React.FC = () => {
@@ -71,7 +71,6 @@ const TeamSection: React.FC = () => {
 
   return (
     // <AnimatedSection>
-
 
     <section className="py-24 max-w-[1152px]">
       <div className="max-w-7xl mx-auto">

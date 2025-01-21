@@ -17,8 +17,12 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
           ></video>
         ) : type === "image" ? (
           <div
-            className="w-full min-h-[calc(100vh-100px)] bg-cover flex items-center justify-center"
-            style={{ backgroundImage: `url(${src})` }}
+            className="w-full min-h-[calc(100vh-100px)] bg-cover bg-center flex items-center justify-center"
+            style={{ 
+              backgroundImage: `url(${src})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+            }}
           >
             <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] px-4 md:px-10 xl:px-0">
               <p className="nilor-pre text-nilor-accent">

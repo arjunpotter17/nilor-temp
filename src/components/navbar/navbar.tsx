@@ -28,7 +28,7 @@ const Navbar = () => {
           className="relative w-[32px] h-[32px] md:w-[48px] md:h-[48px]"
         >
           <Image
-            src={"/logo/logotype_square-clear.png"}
+            src={"/logo/logotype_square-clear.webp"}
             alt="nilor logo"
             fill
           />

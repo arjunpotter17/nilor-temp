@@ -11,7 +11,7 @@ export default function Features() {
       "Rapidly explore latent space – start with an idea, and our tools let you create and unearth connections and happy accidents",
       "Once you’ve created a collection, take it into our pro-user tools to instantly create high fidelity artworks for any canvas",
     ],
-    imageUrl: `/nilor-cool.png`,
+    imageUrl: `/nilor-cool.webp`,
     // videoUrl: `https://pub-05f59bf6323d4ee3a29185a0d7e91752.r2.dev/zenerator.mp4`,
   };
   const feature2 = {
@@ -22,7 +22,7 @@ export default function Features() {
       "Directly use images from our cloud platform to generate, or start here",
       "Upscale your work for those large, high resolution, immersive displays",
     ],
-    imageUrl: `/zenerator-workflow.png`,
+    imageUrl: `/zenerator-workflow.webp`,
   };
   return (
     <AnimatedSection>

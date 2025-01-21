@@ -8,7 +8,7 @@ export const solutionSingleProject: Project = {
   description:
     "Creative Direction and creation of content including images, videos, animation, installations, and even a stained glass window, across a huge immersive cinema show.",
   buttonText: "See AI in Action",
-  url: "/sweet-dreams.jpg",
+  url: "/sweet-dreams.webp",
   fullText:
     "Our AI-powered animation tool brings characters to life with unprecedented realism, saving time and resources in the animation process.",
 };

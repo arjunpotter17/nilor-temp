@@ -8,7 +8,7 @@ export const landingHero: HeroProps = {
 
 export const solutionHero: HeroProps = {
   type: "image",
-  src: "/solutions-hero.png",
+  src: "/solutions-hero.webp",
   pre: "SOLUTIONS",
   title: "nilor empowers immersive creation",
   text: `We help teams craft bold ideas together—free from technical barriers. Our tools turn complex systems into intuitive workflows, so teams can focus on creating refined, real-time experiences together. `,
@@ -16,7 +16,7 @@ export const solutionHero: HeroProps = {
 
 export const productsHero: HeroProps = {
   type: "image",
-  src: "/nilor-cool-title-dark.png",
+  src: "/nilor-cool-title-dark.webp",
   pre: "products",
   title: "An orchestra of instruments",
   text: `We reimagine ideation and asset development, giving teams the tools to explore, experiment, and refine their vision—together. Designed for both technical and non-technical collaborators, it transforms collective input into tangible, cohesive results, unlocking new realms for storytelling.`,
@@ -24,7 +24,7 @@ export const productsHero: HeroProps = {
 
 export const servicesHero: HeroProps = {
   type: "image",
-  src: "/services-hero.png",
+  src: "/services-hero.webp",
   pre: "SERVICES",
   title: "Your composers and collaborators",
   text: `At nilor, we blend technical innovation with artistic vision. Our team of VFX artists and technical experts work in harmony to both create and enable extraordinary visual experiences. Whether you need end-to-end creative development or the tools to bring your own vision to life, we provide the artistry, expertise, and infrastructure to make it possible
@@ -37,7 +37,7 @@ export const projectsHero: HeroProps = {
   pre: "PROJECTS",
   title: "World class projects, worldwide",
   text: "nilor has been trusted by some of the world's most ambitious venues and clients to deliver a rich variety of visual experiences. With extensive experience in a wide range of industries, nilor have been busy creating magic across the globe.",
-  src: "/projects-hero.png",
+  src: "/projects-hero.webp",
 };
 
 export const learnHero: HeroProps = {

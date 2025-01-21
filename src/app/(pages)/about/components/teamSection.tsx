@@ -15,48 +15,48 @@ const teamMembers: TeamMember[] = [
   {
     name: "Lucas Moskun",
     role: "Director",
-    image: "/team/lucas.jpg",
+    image: "/team/lucas.webp",
     description:
       "Recognized by UKVI as a Global Talent, Lucas has had an impactful career building systems that enable immersion and storytelling for industry leading brands such as Boeing, The VOID, and Marshmallow Laser Feast. Lucas, operating at the intersection of XR, AI, and Blockchain, has embarked on developing the nilor platform. This initiative aims to transform creative studios into cutting-edge generative AI studios. nilor studio is the proof in the pudding.",
   },
   {
     name: "Stephen Henderson",
     role: "Creative Director",
-    image: "/team/stephen.png",
+    image: "/team/stephen.webp",
     description:
       "Senior Creative and Programmer with a background in Architecture, Spatial Design & Education. Previously at Marshmallow Laser Feast full time, and his other work has been internationally exhibited, from South Korea to Venice to London, and he has given talks at international symposia such as Ars Electronica. During his time as an educator, Stephen introduced and taught a new Pre-U qualification called Interdisciplinary Design which prepared students for a future in applied arts practices, at a prestigious North London school.",
   },
   {
     name: "Sebastian Monroy",
     role: "Creative Systems Software Engineer and Artist",
-    image: "/team/seb.png",
+    image: "/team/seb.webp",
     description:
       "Always occupying a role that is both technical and creative, Sebastian's expertises are in interactive media design, generative art, and computer graphic programming. Excited by pushing the limits of immersive media and producing rich, engaging experiences, his previous work has been showcased internationally, including Tribeca Film Festival, Cannes Film Festival, The World Economic Forum, Serpentine Gallery, ACMI, and the Museum of the Future.",
   },
   {
     name: "Nils Johannesson",
     role: "Technical Artist",
-    image: "/team/nils.jpg",
+    image: "/team/nils.webp",
     description:
       "Nils Johanesson's VFX Supervision background sharpened his creative eye across award-winning films, commercials, and music videos, collaborating with artists and brands like M.I.A, Rumi Kaul, MEYY, The New Originals, and Obey. His technical expertise, honed at Marshmallow Laser Feast, fuels his innovative experiments in digital media. Nils' work has been showcased globally, including at the Museum of the Future, Tribeca, Cannes, Netherlands Film Festival, WAVE MUSEUM, and ACMI.",
   },
   {
     name: "Dean White",
     role: "Creative Partner",
-    image: "/team/dean.jpg",
+    image: "/team/dean.webp",
     description:
       "Dean White executes audio post-production services for feature films, fortune500 companies, and creative agencies. In early 2014 he joined VICE Media to work across tentpole productions and branded content until late 2019 when he left to start Multiworld. His current clients and destinations include Apple, Alphabet, Meta, Netflix, Amazon Prime, HBO Max, Paramount+, ESPN, Fox, and Condé Nast.",
   },
   {
     name: "James Moskun",
     role: "Board",
-    image: "/team/james.jpg",
+    image: "/team/james.webp",
     description: "Tech entrepeneur & Investor.",
   },
   {
     name: "Eleanor (Nell) Whitley",
     role: "Board",
-    image: "/team/nell.jpg",
+    image: "/team/nell.webp",
     description:
       "Representing Marshmallow Laser Feast (MLF). MLF are an industry leading experiential artist collective who believe in the power of stories to tickle senses and shift perceptions.",
   },

@@ -31,7 +31,7 @@ export const projects: Project[] = [
     description:
       "Creative Direction, Production and Execution of multimedia content across the whole production.",
     buttonText: "See AI in Action",
-    url: "/sweet-dreams.jpg",
+    url: "/sweet-dreams.webp",
     fullText:
       "Our AI-powered animation tool brings characters to life with unprecedented realism, saving time and resources in the animation process.",
   },
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     description:
       "Giant canvas content creation and toolmaking for updating visuals in a popular fine dining venue.",
     buttonText: "Visualize Data",
-    url: "/projects/hermes/hermes-02.png",
+    url: "/projects/hermes/hermes-02.webp",
     btnLink: "/projects/Zenon%20x%20Hermès",
     fullText:
       "Our interactive data visualization platform transforms complex datasets into intuitive, engaging visual stories, making data accessible to everyone.",

@@ -12,7 +12,7 @@ const DMSans = localFont({
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/logo/logo-black-text.png",
+    icon: "/logo/logo-black-text.webp",
   },
   title: "nilor",
   description:

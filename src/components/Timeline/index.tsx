@@ -40,7 +40,7 @@ const TimeLine = () => {
     <div className="bg-black text-white py-4 sm:py-8">
       <div className="max-w-[1152px] mx-auto">
         {/* Desktop Layout */}
-        <div className="hidden sm:flex items-start gap-4 lg:gap-8">
+        <div className="hidden lg:flex items-start gap-4 lg:gap-8">
           {steps.map((step, index) => {
             const isLastStep = index === steps.length - 1;
             return (
@@ -75,7 +75,7 @@ const TimeLine = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="sm:hidden flex flex-col items-center gap-8">
+        <div className="lg:hidden flex flex-col items-center gap-8">
           {steps.map((step, index) => {
             const isLastStep = index === steps.length - 1;
             return (
@@ -99,7 +99,7 @@ const TimeLine = () => {
                 </div>
                 {!isLastStep && (
                   <div className="h-12 w-[2px] bg-gray-600 relative">
-                    <ArrowDown className="absolute bottom-0 left-1/2 -translate-x-1/2 text-gray-600 w-4 h-4" />
+                    <ArrowDown className="absolute bottom-[-5px] left-1/2 -translate-x-1/2 text-gray-600 w-4 h-4" />
                   </div>
                 )}
               </React.Fragment>

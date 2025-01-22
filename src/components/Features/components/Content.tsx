@@ -9,7 +9,7 @@ interface ContentProps {
 export function Content({ title, points }: ContentProps) {
   return (
     <div className="~space-y-8/14">
-      <h2 className="nilor-section-title font-nilor-regular">{title}</h2>
+      <h2 className="nilor-section-title font-nilor-regular text-nilor-offwhite">{title}</h2>
       <ul className="space-y-4">
         {points.map((point, index) => (
           <BulletPoint key={index} text={point} />

@@ -1,7 +1,8 @@
 import { HeroProps } from "@/lib/types";
 import { AnimatedSection } from "../AnimateComponent";
+import Image from "next/image";
 
-function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
+function HeroBanner({ type, text, src, pre, title, titleText, mailTo }: HeroProps) {
   return (
     <AnimatedSection className="!min-w-full">
       <div className="w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center relative">
@@ -18,10 +19,17 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
           ></video>
         ) : type === "image" ? (
           <div
-            className="w-full min-h-[calc(100vh-100px)] bg-cover flex items-center justify-center"
-            style={{ backgroundImage: `url(${src})` }}
+            className="w-full min-h-[calc(100vh-100px)] bg-cover bg-center flex items-center justify-center relative"
           >
-            <div className="flex flex-col text-nilor-white w-full h-full max-w-[1152px] px-4 md:px-10 xl:px-0">
+            <Image 
+              src={src}
+              alt="Hero background"
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              fill
+              priority={true}
+              loading="eager"
+            />
+            <div className="flex flex-col z-10 text-nilor-white w-full h-full max-w-[1152px] px-4 md:px-10 xl:px-0">
               <p className="nilor-pre text-nilor-accent">
                 {pre.toLocaleLowerCase()}
               </p>
@@ -36,6 +44,12 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
                       <br />
                     </span>
                   ))}
+                </p>
+              )}
+               {mailTo && (
+                <p className="nilor-hero-text font-nilor-light text-nilor-white w-[60%] text-justify whitespace-pre-wrap mt-6">
+                  Use the form above, or email 
+                  <span onClick={() => window.open(`mailto:${mailTo}`, '_blank')} className="text-nilor-accent font-nilor-semibold cursor-pointer hover:underline"> hello@nilor.cool</span>
                 </p>
               )}
             </div>

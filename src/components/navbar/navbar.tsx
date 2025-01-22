@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import NilorButton from "../NilorButton";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { HiMenuAlt1 } from "react-icons/hi";
 // import { XIcon, MenuIcon } from '@heroicons/react/outline'; // Optional: for hamburger icon and close icon
 
 const Navbar = () => {
@@ -31,6 +31,9 @@ const Navbar = () => {
             src={"/logo/logotype_square-clear.webp"}
             alt="nilor logo"
             fill
+            priority
+            loading="eager"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </Link>
         {/* Desktop Navbar Items */}
@@ -74,7 +77,9 @@ const Navbar = () => {
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-nilor-offwhite text-xl">
-            {isOpen ? "" : <GiHamburgerMenu />} {/* X for close, ☰ for menu */}
+            {isOpen ? "" : <div className="rotate-180">
+              <HiMenuAlt1  />
+            </div> } {/* X for close, ☰ for menu */}
           </button>
         </div>
       </nav>

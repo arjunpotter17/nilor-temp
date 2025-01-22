@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
 
 interface ProjectImageProps {
@@ -35,11 +36,12 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full relative">
         {/* Image shown when not hovered */}
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          fill
           className={`w-full h-full object-cover transition-opacity duration-300
             ${isHovered && videoUrl ? "opacity-0" : "opacity-100"}`}
         />

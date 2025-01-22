@@ -3,7 +3,7 @@ import { HeroProps } from "@/lib/types";
 export const landingHero: HeroProps = {
   text: "nilor conjures immersive worlds through dynamic canvases, fusing artistic vision and technological innovation to transform spaces into other worlds. Harnessing AI, real-time rendering, and more traditional techniques, we summon visions once thought impossible.",
   type: "video",
-  src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`,
+  src: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}landing.mp4`,
 };
 
 export const solutionHero: HeroProps = {
@@ -42,7 +42,7 @@ export const projectsHero: HeroProps = {
 
 export const learnHero: HeroProps = {
   type: "bgVideo",
-  src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL_2}barbie.mp4`,
+  src: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}collation.mp4`,
   pre: "learn",
   title: "Carve your own path of discovery",
   text: `Our platform is the perfect entry point into unleashing the power of visually investigating your ideas. Whether you're a seasoned sensei or a curious kook, our tutorials will guide you through the process of exploration, creation, and collaboration, so you can inject life into that thing you've been thinking about.`,
@@ -50,7 +50,7 @@ export const learnHero: HeroProps = {
 
 export const aboutHero: HeroProps = {
   type: "bgVideo",
-  src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`,
+  src: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}landing.mp4`,
   pre: "ABOUT",
   title: "Our Agenda",
   text: `We want more stories to be told, more worlds to be explored, and more experiences to be shared. We believe that the best way to achieve this is to empower creators with the tools they need to bring their ideas to life. 

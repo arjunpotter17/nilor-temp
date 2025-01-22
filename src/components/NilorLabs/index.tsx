@@ -3,12 +3,13 @@ import NilorButton from "../NilorButton";
 import PreTitle from "../PreTitle";
 
 function NilorLabs() {
+  console.log(process.env.NEXT_PUBLIC_CLOUDFRONT_URL);
   return (
     <AnimatedSection>
       <div className="w-full flex flex-col justify-center items-center">
         <PreTitle pre="services" title="Innovation across the board" />
         <video
-          src={`https://pub-05f59bf6323d4ee3a29185a0d7e91752.r2.dev/labs.mp4`}
+          src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}hermes.mp4`}
           autoPlay={true}
           loop
           controls={false}

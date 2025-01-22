@@ -2,8 +2,10 @@ import { HeroProps } from "@/lib/types";
 
 export const landingHero: HeroProps = {
   text: "nilor conjures immersive worlds through dynamic canvases, fusing artistic vision and technological innovation to transform spaces into other worlds. Harnessing AI, real-time rendering, and more traditional techniques, we summon visions once thought impossible.",
-  type: "video",
+  type: "bgVideo",
   src: `${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}landing.webm`,
+  pre: "nilor studio",
+  title: "From pixels to portals to places",
 };
 
 export const solutionHero: HeroProps = {

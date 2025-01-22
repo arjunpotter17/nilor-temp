@@ -1,51 +1,57 @@
-import React, { useState, useRef, useEffect } from "react";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import Image from "next/image";
+// import React, { useState, useRef, useEffect } from "react";
 
 interface ProjectImageProps {
   title: string;
   imageUrl: string;
   videoUrl?: string; // New prop for video source
+  router: AppRouterInstance;
 }
 
 export const ProjectImage: React.FC<ProjectImageProps> = ({
   title,
   imageUrl,
-  videoUrl
+  videoUrl,
+  router
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  // const [isHovered, setIsHovered] = useState(false);
+  // const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    if (videoRef.current && videoUrl) {
-      if (isHovered) {
-        videoRef.current.play().catch((error) => {
-          console.log("Video autoplay failed:", error);
-        });
-      } else {
-        videoRef.current.pause();
-        videoRef.current.currentTime = 0;
-      }
-    }
-  }, [isHovered]);
+  // useEffect(() => {
+  //   if (videoRef.current && videoUrl) {
+  //     if (isHovered) {
+  //       videoRef.current.play().catch((error) => {
+  //         console.log("Video autoplay failed:", error);
+  //       });
+  //     } else {
+  //       videoRef.current.pause();
+  //       videoRef.current.currentTime = 0;
+  //     }
+  //   }
+  // }, [isHovered]);
 
   return (
     <div
-      className={`overflow-hidden rounded-lg transition-all duration-500 
-        ${isHovered && videoUrl ? "scale-125 z-50 cursor-pointer" : "scale-100"}
+      className={`overflow-hidden rounded-lg transition-all duration-500 cursor-pointer
+        ${ videoUrl ? "scale-125 z-50 cursor-pointer" : "scale-100"}
         w-full md:w-1/2 aspect-video`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
+      onClick={() => router.push(`/projects/${title}`)}
     >
-      <div className="absolute inset-0 w-full h-full">
+      <div className="inset-0 w-full h-full relative">
         {/* Image shown when not hovered */}
-        <img
+        <Image
           src={imageUrl}
           alt={title}
+          fill
           className={`w-full h-full object-cover transition-opacity duration-300
-            ${isHovered && videoUrl ? "opacity-0" : "opacity-100"}`}
+            `}
         />
         
         {/* Video shown when hovered */}
-       {videoUrl && <video
+       {/* {videoUrl && <video
           ref={videoRef}
           src={videoUrl}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300
@@ -54,7 +60,7 @@ export const ProjectImage: React.FC<ProjectImageProps> = ({
           muted
           playsInline
           loop
-        />}
+        />} */}
       </div>
     </div>
   );

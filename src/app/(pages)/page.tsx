@@ -17,9 +17,11 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full gap-y-[100px] md:gap-y-[200px]">
       <HeroBanner
-        text={landingHero.text}
-        type="video" //complains if dynamic
-        src={landingHero.src}
+        text={landingHero.text as string}
+        type="bgVideo"
+        src={landingHero.src as string}
+        pre={landingHero.pre as string}
+        title={landingHero.title as string}
       />
 
       <Projects

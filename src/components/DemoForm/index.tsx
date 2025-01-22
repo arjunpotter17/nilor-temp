@@ -14,6 +14,7 @@ import { FormData } from "./types/form";
 import { validateField } from "./utils/validations";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import Spinner from "../Spinner";
 
 interface formProps {
   formClasses?: string;
@@ -31,6 +32,7 @@ export default function ContactForm({
   const [touched, setTouched] = useState<
     Partial<Record<keyof FormData, boolean>>
   >({});
+  const [loading, setLoading] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
 
   const isFieldHidden = (field: keyof FormData) => hiddenFields.includes(field);
@@ -81,7 +83,9 @@ export default function ContactForm({
     setTouched(allTouched);
 
     if (!Object.values(newErrors).some((error) => error !== "")) {
+      setLoading(true);
       try {
+
         const response = await fetch(
           "/api/contact-form",
           {
@@ -103,7 +107,8 @@ export default function ContactForm({
       } catch (error) {
         console.error("Error:", error);
         toast.error("Something went wrong. Consider reach out via email");
-        
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -121,6 +126,7 @@ export default function ContactForm({
               error={!!errors.name && touched.name}
               placeholder="Enter your name"
               className={`${formClasses}`}
+              disabled={loading}
             />
           </FormField>
         )}
@@ -150,6 +156,7 @@ export default function ContactForm({
               dropdownClass="!text-nilor-black rounded"
               searchClass="!bg-gray-700 !text-white"
               disableSearchIcon
+              disabled={loading}
               countryCodeEditable={false}
             />
           </FormField>
@@ -165,6 +172,7 @@ export default function ContactForm({
               error={!!errors.email && touched.email}
               placeholder="Enter a work email"
               className={`${formClasses}`}
+              disabled={loading}
             />
           </FormField>
         )}
@@ -182,6 +190,7 @@ export default function ContactForm({
               onBlur={() => handleBlur("company")}
               placeholder="What's your company called?"
               error={!!errors.company && touched.company}
+              disabled={loading}
               className={`${formClasses}`}
             />
           </FormField>
@@ -200,6 +209,7 @@ export default function ContactForm({
               error={!!errors.industry && touched.industry}
               options={INDUSTRIES}
               placeholder="Industry"
+              disabled={loading}
               className={`${formClasses}`}
             />
           </FormField>
@@ -218,6 +228,7 @@ export default function ContactForm({
               error={!!errors.country && touched.country}
               options={COUNTRIES}
               placeholder="Country"
+              disabled={loading}
               className={`${formClasses}`}
             />
           </FormField>
@@ -236,6 +247,7 @@ export default function ContactForm({
               error={!!errors.businessType && touched.businessType}
               options={BUSINESS_TYPES}
               placeholder="Business Type"
+              disabled={loading}
               className={`${formClasses}`}
             />
           </FormField>
@@ -255,6 +267,7 @@ export default function ContactForm({
               placeholder="Drop a message or a query"
               error={!!errors.comments && touched.comments}
               className={`${formClasses}`}
+              disabled={loading}
             />
           </FormField>
         )}
@@ -267,9 +280,10 @@ export default function ContactForm({
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               type="submit"
+              disabled={loading}
               className="text-nilor-white rounded-full px-7 py-3 font-bold bg-nilor-accent transform hover:scale-95 transition-all duration-200"
             >
-              Submit
+              {loading ? <Spinner size={20} color="#fff" /> : "Submit"}
             </motion.button>
           )}
         </div>

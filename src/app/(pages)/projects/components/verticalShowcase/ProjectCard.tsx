@@ -26,14 +26,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = (props) => {
       <div
         className={`flex flex-col items-center w-full gap-8 py-3 px-4 md:px-10 xl:px-0 transition-all duration-500 ${props.className}`}
       >
-        <ProjectImage {...props} />
+        <ProjectImage {...props} router={router} />
 
         <div
           className={`w-full md:w-1/2 space-y-3 transition-all duration-500 
         ${"opacity-100"}`}
         >
           {/* <div className="text-sm uppercase tracking-wider text-nilor-grey">{props.category}</div> */}
-          <h3 className="text-3xl font-nilor-light text-nilor-accent">
+          <h3 onClick={() => router.push(`/projects/${props.title}`)} className="text-3xl font-nilor-light text-nilor-accent cursor-pointer">
             {props.title}
           </h3>
           <p

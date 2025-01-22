@@ -78,7 +78,7 @@ export default {
           "@apply ~text-[2.5rem]/[4rem] ~leading-[1]": {},
         },
         ".nilor-hero-text": {
-          "@apply ~text-sm/[1.43rem] ~leading-[1.75rem]/[2.rem]": {},
+          "@apply ~text-lg/[1.43rem] ~leading-[1.75rem]/[2.rem]": {},
         },
         ".nilor-text-small": {
           "@apply ~text-base/lg ~leading-7/8": {},

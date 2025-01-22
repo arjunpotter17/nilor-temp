@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronDown, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { allProjects as projects } from "@/app/constants/indi_project_details";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 const ProjectDetails = () => {
   const params = usePathname();
@@ -171,18 +172,24 @@ const ProjectDetails = () => {
             <div className="w-full lg:max-w-[1152px] z-10">
               <div className="relative md:aspect-[16/9]">
                 <AnimatePresence mode="wait">
-                  <motion.img
+                  <motion.div
                     key={selectedThumbnailIndex}
-                    src={project.images[selectedThumbnailIndex]}
-                    alt={`${project.name} - Image ${
-                      selectedThumbnailIndex + 1
-                    }`}
-                    className="w-full h-full object-contain"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                  />
+                    className="w-full h-full relative"
+                  >
+                    <Image
+                      src={project.images[selectedThumbnailIndex]}
+                      alt={`${project.name} - Image ${
+                        selectedThumbnailIndex + 1
+                      }`}
+                      className="object-contain"
+                      fill
+                      priority
+                    />
+                  </motion.div>
                 </AnimatePresence>
 
                 <button

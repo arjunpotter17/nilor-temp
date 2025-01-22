@@ -14,6 +14,7 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
             muted
             className=" min-h-[calc(100vh-100px)] w-full object-cover"
             disablePictureInPicture
+            playsInline
           ></video>
         ) : type === "image" ? (
           <div

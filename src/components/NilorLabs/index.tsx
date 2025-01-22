@@ -17,6 +17,7 @@ function NilorLabs() {
           preload="auto"
           className="h-full w-full max-h-[800px]"
           disablePictureInPicture
+          playsInline
         ></video>
         <NilorButton text="View Services" linkTo={"/services"} />
       </div>

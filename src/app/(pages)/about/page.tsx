@@ -78,7 +78,6 @@ export default function About() {
           title={aboutContactSection.title as string}
           titleText={aboutContactSection.titleText}
         />
-        
       </div>
       <Footer />
     </div>

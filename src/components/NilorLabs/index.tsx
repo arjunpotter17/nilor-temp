@@ -9,7 +9,7 @@ function NilorLabs() {
       <div className="w-full flex flex-col justify-center items-center">
         <PreTitle pre="services" title="Innovation across the board" />
         <video
-          src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}hermes.mp4`}
+          src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}hermes.webm`}
           autoPlay={true}
           loop
           controls={false}

@@ -13,7 +13,7 @@ export default function Mission() {
         </p>
       </div>
       <video
-        src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}landing.mp4`}
+        src={`${process.env.NEXT_PUBLIC_CLOUDFRONT_URL}landing.webm`}
         controls={true}
         className="h-full w-full"
       ></video>

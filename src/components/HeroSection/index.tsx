@@ -1,7 +1,7 @@
 import { HeroProps } from "@/lib/types";
 import { AnimatedSection } from "../AnimateComponent";
 
-function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
+function HeroBanner({ type, text, src, pre, title, titleText, mailTo }: HeroProps) {
   return (
     <AnimatedSection className="!min-w-full">
       <div className="w-full min-h-[calc(100vh-100px)] flex flex-col justify-center items-center relative">
@@ -39,6 +39,12 @@ function HeroBanner({ type, text, src, pre, title, titleText }: HeroProps) {
                       <br />
                     </span>
                   ))}
+                </p>
+              )}
+               {mailTo && (
+                <p className="nilor-hero-text font-nilor-light text-nilor-white w-[60%] text-justify whitespace-pre-wrap mt-6">
+                  Use the form above, or email 
+                  <span onClick={() => window.open(`mailto:${mailTo}`, '_blank')} className="text-nilor-accent font-nilor-semibold cursor-pointer hover:underline"> hello@nilor.cool</span>
                 </p>
               )}
             </div>

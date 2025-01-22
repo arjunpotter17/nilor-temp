@@ -31,6 +31,7 @@ interface HeroPropsBase {
   text?: string;
   src: string;
   titleText?: string;
+  mailTo?: string;
 }
 
 interface HeroPropsVideo extends HeroPropsBase {

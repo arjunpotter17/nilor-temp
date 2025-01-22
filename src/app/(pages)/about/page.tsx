@@ -76,7 +76,8 @@ export default function About() {
           src={aboutContactSection.src}
           pre=""
           title={aboutContactSection.title as string}
-          titleText={aboutContactSection.titleText}
+          // titleText={aboutContactSection.titleText}
+          mailTo="hello@nilor.cool"
         />
         
       </div>

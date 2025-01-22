@@ -124,6 +124,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                       fill
                       src={slide.url}
                       alt={slide.title || (slide.id as unknown as string)}
+                      className="object-cover"
                     />
                      
                   </div>

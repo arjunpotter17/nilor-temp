@@ -2,8 +2,10 @@ import { HeroProps } from "@/lib/types";
 
 export const landingHero: HeroProps = {
   text: "nilor conjures immersive worlds through dynamic canvases, fusing artistic vision and technological innovation to transform spaces into other worlds. Harnessing AI, real-time rendering, and more traditional techniques, we summon visions once thought impossible.",
-  type: "video",
+  type: "bgVideo",
   src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`,
+  pre: "nilor.cool",
+  title: "nilor.cool",
 };
 
 export const solutionHero: HeroProps = {
@@ -63,5 +65,5 @@ export const aboutContactSection: HeroProps = {
   src: "/contactus-bg.webp",
   pre: "",
   title: "Any questions?",
-  titleText: `Use the form above, or email hello@nilor.cool`,
+  titleText: `Use the form above, or email <span onClick={() => window.open('mailto:hello@nilor.cool', '_blank')} className="text-nilor-accent">hello@nilor.cool</span>`,
 };

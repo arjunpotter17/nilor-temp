@@ -118,7 +118,7 @@ export default function TabSwitch({
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
-                  className="relative lg:max-w-[50%] w-full h-[300px] mt-10 md:mt-0"
+                  className="relative lg:max-w-[50%] w-full h-[250px] lg:h-[300px] mt-10 md:mt-0"
                 >
                   <Image 
                     src={currentTab.imgSrc} 
@@ -127,6 +127,7 @@ export default function TabSwitch({
                     priority
                     loading="eager"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    objectFit="cover"
                   />
                 </motion.div>
               </div>

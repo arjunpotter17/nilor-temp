@@ -65,7 +65,7 @@ const TimeLine = () => {
                 {!isLastStep && (
                   <div className="flex-[2] flex items-center justify-center mt-6">
                     <div className="w-full h-[2px] bg-gray-600 relative">
-                      <ArrowRight className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-600 w-4 h-4" />
+                      <ArrowRight className="absolute right-[-5px] top-1/2 -translate-y-1/2 text-gray-600 w-4 h-4" />
                     </div>
                   </div>
                 )}

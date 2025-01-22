@@ -4,8 +4,8 @@ export const landingHero: HeroProps = {
   text: "nilor conjures immersive worlds through dynamic canvases, fusing artistic vision and technological innovation to transform spaces into other worlds. Harnessing AI, real-time rendering, and more traditional techniques, we summon visions once thought impossible.",
   type: "bgVideo",
   src: `${process.env.NEXT_PUBLIC_CLOUDFLARE_URL}landing-video.mp4`,
-  pre: "nilor.cool",
-  title: "nilor.cool",
+  pre: "nilor studio",
+  title: "From pixels to portals to places",
 };
 
 export const solutionHero: HeroProps = {

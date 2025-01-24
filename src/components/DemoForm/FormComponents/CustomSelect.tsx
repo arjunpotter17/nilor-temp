@@ -74,7 +74,7 @@ export function CustomSelect({
       </div>
 
       {isOpen && (
-        <div className="absolute z-10 w-full mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-lg">
+        <div className="absolute z-10 w-full mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-lg overflow-y-scroll max-h-[200px]">
           {options.map((option) => (
             <div
               key={option.value}

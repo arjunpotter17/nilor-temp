@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { FormField } from '../../../../components/DemoForm/FormComponents/FormField';
-import { Input } from '../../../../components/DemoForm/FormComponents/Input';
-import { CustomSelect } from '../../../../components/DemoForm/FormComponents/CustomSelect';
-import { INDUSTRIES, COUNTRIES, INITIAL_DATA } from '../../../../lib/utils';
-import { FormData } from '../../../../lib/types';
-import { validateField } from '../../../../lib/validations';
+import { FormField } from '@/components/DemoForm/FormComponents/FormField';
+import { Input } from '@/components/DemoForm/FormComponents/Input';
+import { CustomSelect } from '@/components/DemoForm/FormComponents/CustomSelect';
+import { INDUSTRIES, COUNTRIES, INITIAL_DATA } from '@/components/DemoForm/utils/constants';
+import { FormData } from '@/lib/types';
+import { validateField } from '@/lib/validations';
 import { motion } from 'framer-motion';
 
 export default function ContactUsForm() {

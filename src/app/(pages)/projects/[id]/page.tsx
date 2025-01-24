@@ -167,10 +167,10 @@ const ProjectDetails = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="h-screen flex items-center justify-center"
+            className="h-screen flex pt-20 md:pt-0 md:items-center justify-center"
           >
             <div className="w-full lg:max-w-[1152px] z-10">
-              <div className="relative md:aspect-[16/9]">
+              <div className="relative aspect-square md:aspect-[16/9]">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={selectedThumbnailIndex}

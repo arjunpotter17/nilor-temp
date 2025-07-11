@@ -1,4 +1,10 @@
-export const collaborationDetails = [
+type CollaborationDetails = {
+    title: string;
+    videoSrc: string;
+    iframeTitle: string;
+}
+
+export const collaborationDetails: CollaborationDetails[] = [
     {
         //match title with pathname
         title: "edglrdxnilor",

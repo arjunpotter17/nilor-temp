@@ -10,6 +10,16 @@ export default function ProjectPage() {
     (item) => item.title === project
   );
 
+  if (!projectDetails) {
+    return (
+      <div className="w-full h-[calc(100vh-72px)] flex justify-center items-center">
+        <p className="text-nilor-white px-4 text-center">
+          <span className="text-nilor-accent">Dang it.</span> This collab does
+          not exist yet. Loving the optimism but wait for it to happen.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <>

@@ -14,6 +14,18 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Project 1",
+    title: "tAxI",
+    pre: "cannes, france",
+    description:
+      "a multi-sensory installation inside a self-driving cab, turning the backseat into a confessional.",
+    buttonText: "Take a ride",
+    url: "/projects/tAxI/1.jpg",
+    fullText:
+      "Our innovative VR experience allows architects and clients to walk through designs before they're built, revolutionizing the way we approach architectural projects.",
+  },
+  {
+    id: 2,
+    name: "Project 2",
     title: "Seeing echoes in the mind of the whale",
     pre: "disseny hub, barcelona",
     description:
@@ -24,8 +36,8 @@ export const projects: Project[] = [
       "Our innovative VR experience allows architects and clients to walk through designs before they're built, revolutionizing the way we approach architectural projects.",
   },
   {
-    id: 2,
-    name: "Project 2",
+    id: 3,
+    name: "Project 3",
     title: "Sweet Dreams",
     pre: "aviva studios, manchester",
     description:
@@ -36,8 +48,8 @@ export const projects: Project[] = [
       "Our AI-powered animation tool brings characters to life with unprecedented realism, saving time and resources in the animation process.",
   },
   {
-    id: 3,
-    name: "Project 3",
+    id: 4,
+    name: "Project 4",
     title: "Hermès",
     pre: "dubai mall, dubai",
     description:

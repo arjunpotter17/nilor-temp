@@ -63,7 +63,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="min-h-[calc(100vh-100px)] bg-black relative px-4 md:px-10 xl:px-0">
+    <div className="h-[calc(100vh-100px)] overflow-hidden bg-black relative px-4 md:px-10 xl:px-0">
       {/* Background Image */}
       <AnimatePresence mode="wait">
         {!showCarousel && (
@@ -135,8 +135,8 @@ const ProjectDetails = () => {
               transition={{ duration: 0.5 }}
               className="pb-5 self-end  mt-10"
             >
-              <div className="w-full flex items-center justify-center min-h-[calc(100vh-150px)]">
-                <div className="self-end w-full max-w-[1152px]">
+              <div className="w-full flex items-end justify-center h-[calc(100vh-150px)] overflow-y-auto ">
+                <div className="w-full max-w-[1152px]  h-[600px] overflow-y-auto mb-4 pb-10">
                   <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                     {project.name}
                   </h1>

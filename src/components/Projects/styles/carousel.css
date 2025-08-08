@@ -5,6 +5,7 @@
   --slide-spacing: 2rem;
   --slide-size: 80%;
   margin-top: 0;
+  width: 100%;
 }
 .embla__container {
   display: flex;

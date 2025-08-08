@@ -1,5 +1,43 @@
 export const allProjects = [
   {
+    id: 0,
+    name: "tAxI",
+    description: [
+      {
+        subtitle: "Client",
+        text: "Cannes Film Festival",
+      },
+      {
+        subtitle: "Brief",
+        text: "a multi-sensory installation inside a self-driving cab, turning the backseat into a confessional.",
+      },
+      {
+        subtitle: "Challenge",
+        text: "Build a Gen AI VFX pipeline and create tooling that can extract depth information, optical flow, and segmentation",
+      },
+      {
+        subtitle: "Solution",
+        text: "nilor built Depth Plus, an open source tool capable of integrating the latest technologies to extract the required data and output them in a wide range of formats for use in other applications",
+      },
+      {
+        subtitle: "Impact",
+        text: "At DHub running from 10/10/2024 - 23/02/2025\nVideo artwork is an 18-minute long 2-channel video installation with 16.2-channel audio.",
+      },
+    ],
+
+    images: [
+      "/projects/tAxI/1.jpg",
+      "/projects/tAxI/2.png",
+      "/projects/tAxI/3.jpg",
+      "/projects/tAxI/4.jpg",
+      "/projects/tAxI/5.jpg",
+      "/projects/tAxI/1.gif",
+      "/projects/tAxI/6.jpg",
+    ],
+    brief:
+      "a multi-sensory installation inside a self-driving cab, turning the backseat into a confessional.",
+  },
+  {
     id: 1,
     name: "Seeing echoes in the mind of the whale",
     description: [
